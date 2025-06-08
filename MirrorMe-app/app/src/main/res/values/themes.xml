@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.MyApplication" parent="android:Theme.Material.Light.NoActionBar" />
+    <!-- Main app theme -->
+    <style name="Theme.MirrorMe" parent="android:Theme.Material.Light.NoActionBar">
+    </style>
 </resources>

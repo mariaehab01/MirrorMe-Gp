@@ -16,9 +16,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://jitpack.io")
     }
 }
 
-rootProject.name = "My Application"
+rootProject.name = "MirrorMe"
 include(":app")
