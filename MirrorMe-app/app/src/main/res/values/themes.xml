@@ -3,4 +3,8 @@
     <!-- Main app theme -->
     <style name="Theme.MirrorMe" parent="android:Theme.Material.Light.NoActionBar">
     </style>
+
+
+
+
 </resources>

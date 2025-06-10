@@ -23,26 +23,30 @@ import com.example.mirrorme.R
 import com.example.mirrorme.ui.theme.mainBlue
 
 sealed class BodyInfoItem {
-    data class ImageItem(val painter: Painter) : BodyInfoItem()
+    data class ImageItem(
+        val painter: Painter,
+        val width: Dp = 80.dp,
+        val height: Dp = 120.dp
+    ) : BodyInfoItem()
+
     data class ColorItem(val color: Color) : BodyInfoItem()
 }
 
 @Composable
 fun BodyInfoScroller(
-    title:String,
+    title: String,
     items: List<BodyInfoItem>,
-    itemSize: Dp = 80.dp,
-    itemHeight: Dp = 120.dp,
     shape: RoundedCornerShape = RoundedCornerShape(12.dp),
     onItemSelected: (Int) -> Unit
 ) {
     var selectedIndex by remember { mutableStateOf(0) }
     val scrollState = rememberScrollState()
-    Column{
+
+    Column {
         Text(
             title,
-            fontSize = 24.sp,
-            fontWeight = FontWeight.Bold,
+            fontSize = 22.sp,
+            fontWeight = FontWeight.Medium,
             color = mainBlue,
         )
 
@@ -63,27 +67,36 @@ fun BodyInfoScroller(
                     shape = shape
                 )
 
-                Box(
-                    modifier = Modifier
-                        .size(width = itemSize, height = itemHeight)
-                        .clip(shape)
-                        .then(borderModifier)
-                        .clickable {
-                            selectedIndex = index
-                            onItemSelected(index)
-                        }
-                ) {
-                    when (item) {
-                        is BodyInfoItem.ImageItem -> Image(
-                            painter = item.painter,
-                            contentDescription = "Body Info Image $index",
-                            modifier = Modifier.fillMaxSize()
-                        )
-
-                        is BodyInfoItem.ColorItem -> Box(
+                when (item) {
+                    is BodyInfoItem.ImageItem -> {
+                        Box(
                             modifier = Modifier
-                                .fillMaxSize()
+                                .size(width = item.width, height = item.height)
+                                .clip(shape)
+                                .then(borderModifier)
+                                .clickable {
+                                    selectedIndex = index
+                                    onItemSelected(index)
+                                }
+                        ) {
+                            Image(
+                                painter = item.painter,
+                                contentDescription = "Body Info Image $index",
+                                modifier = Modifier.fillMaxSize()
+                            )
+                        }
+                    }
+                    is BodyInfoItem.ColorItem -> {
+                        Box(
+                            modifier = Modifier
+                                .size(35.dp)
+                                .clip(shape)
+                                .then(borderModifier)
                                 .background(item.color)
+                                .clickable {
+                                    selectedIndex = index
+                                    onItemSelected(index)
+                                }
                         )
                     }
                 }

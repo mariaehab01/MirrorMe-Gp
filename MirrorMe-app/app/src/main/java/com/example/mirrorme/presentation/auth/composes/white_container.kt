@@ -53,7 +53,7 @@ fun fieldsContainer(
         ) {
             Text(
                 text = title,
-                fontSize = 28.sp,
+                fontSize = 26.sp,
                 fontWeight = FontWeight.Bold,
                 color = lightBlue,
                 textAlign = TextAlign.Center

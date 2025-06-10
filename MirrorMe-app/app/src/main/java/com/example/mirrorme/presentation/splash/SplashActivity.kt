@@ -28,10 +28,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onSizeChanged
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -40,7 +38,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
-import com.example.mirrorme.MainActivity
 import com.example.mirrorme.R
 import com.example.mirrorme.presentation.auth.SignUp
 import com.example.mirrorme.ui.theme.MirrorMeTheme
@@ -70,7 +67,6 @@ class SplashActivity : ComponentActivity() {
 fun SplashScreenUI(onTimeout: () -> Unit = {}) {
     var isContentVisible by remember { mutableStateOf(false) }
     var shouldBlink by remember { mutableStateOf(false) }
-    val density = LocalDensity.current
     var screenWidthPx = 0
     var startSlideOut by remember { mutableStateOf(false) }
 
@@ -78,10 +74,10 @@ fun SplashScreenUI(onTimeout: () -> Unit = {}) {
         targetValue = if (startSlideOut) (-1000).dp else 0.dp, // Pull to the left
         animationSpec = tween(durationMillis = 1600, easing = LinearOutSlowInEasing),
         finishedListener = {
-        if (startSlideOut) {
-            onTimeout() // Trigger home screen transition
+            if (startSlideOut) {
+                onTimeout() // Trigger home screen transition
+            }
         }
-    }
     )
     val textColor by animateColorAsState(
         targetValue = if (shouldBlink) popColor else mainBlue,

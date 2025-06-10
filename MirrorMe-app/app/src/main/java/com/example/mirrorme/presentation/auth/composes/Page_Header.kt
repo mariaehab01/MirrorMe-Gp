@@ -16,7 +16,6 @@ fun PageHeader(
     line1: String,
     line2: String,
     modifier: Modifier = Modifier,
-    contentAlignment: Alignment = Alignment.Center
 ) {
     Column(modifier = modifier) {
         Text(
