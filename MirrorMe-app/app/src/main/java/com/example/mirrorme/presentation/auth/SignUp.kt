@@ -22,6 +22,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -47,16 +48,12 @@ class SignUp : ComponentActivity() {
                         route = "bodyInfo/{gender}?email={email}&password={password}&phone={phone}",
                         arguments = listOf(
                             navArgument("gender") { defaultValue = "unknown" },
-                            navArgument("email") { defaultValue = "" },
-                            navArgument("password") { defaultValue = "" },
                             navArgument("phone") { defaultValue = "" }
                         )
                     ) { backStackEntry ->
                         val gender = backStackEntry.arguments?.getString("gender") ?: "unknown"
-                        val email = backStackEntry.arguments?.getString("email") ?: ""
-                        val password = backStackEntry.arguments?.getString("password") ?: ""
                         val phone = backStackEntry.arguments?.getString("phone") ?: ""
-                        BodyInfoContent(gender, email, password, phone)
+                        BodyInfoContent(gender, phone)
                     }
                 }
             }
@@ -67,6 +64,7 @@ class SignUp : ComponentActivity() {
 @Composable
 fun SignUpContent(
     navController: NavHostController,
+    viewModel: AuthViewModel = viewModel()
 ) {
     var email by remember { mutableStateOf("") }
     var phone by remember { mutableStateOf("") }
@@ -77,6 +75,40 @@ fun SignUpContent(
     var passwordError by remember { mutableStateOf<String?>(null) }
     var confirmPasswordError by remember { mutableStateOf<String?>(null) }
     var selectedGender by remember { mutableStateOf("Female") }
+
+    var showSuccessDialog by remember { mutableStateOf(false) }
+
+    val uiState by viewModel.uiState.collectAsState()
+
+    LaunchedEffect(uiState) {
+        when (uiState) {
+            is AuthUiState.Success -> {
+                navController.navigate("bodyInfo/${selectedGender.lowercase()}?phone=$phone") {
+                    popUpTo("signUp") { inclusive = true }
+                }
+            }
+            is AuthUiState.Error -> {
+                showSuccessDialog = true
+            }
+            else -> Unit
+        }
+    }
+
+    if (showSuccessDialog) {
+        AlertDialog(
+            onDismissRequest = { showSuccessDialog = false },
+            confirmButton = {
+                TextButton(onClick = {
+                    showSuccessDialog = false
+                }) {
+                    Text("Ok", color = mainPink, fontWeight = FontWeight.Bold)
+                }
+            },
+            title = { Text("Verify Your Email", fontWeight = FontWeight.Bold) },
+            text = { Text("We've sent a confirmation link to your email. Please verify it before continuing.") },
+            containerColor = Color.White
+        )
+    }
 
     // Main content of the Sign Up screen
     Box {
@@ -93,7 +125,6 @@ fun SignUpContent(
                 .padding(start = 40.dp, end = 40.dp, top = 180.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // Container for the sign-up fields
             fieldsContainer("Sign Up", 0.7f, modifier = Modifier.fillMaxWidth()) {
                 val scrollState = rememberScrollState()
                 Column(
@@ -101,7 +132,6 @@ fun SignUpContent(
                         .fillMaxWidth()
                         .verticalScroll(scrollState)
                 ) {
-                    // email, phone, password, and confirm password fields
                     RoundedTextField(
                         value = email,
                         placeholder = "Enter your email",
@@ -142,7 +172,7 @@ fun SignUpContent(
                     )
 
                     Spacer(Modifier.height(18.dp))
-                    // gender selection section
+
                     Text(
                         text = "Gender",
                         fontWeight = FontWeight.Bold,
@@ -171,12 +201,7 @@ fun SignUpContent(
                                 checkmarkColor = Color.White
                             )
                         )
-                        Text(
-                            "Male",
-                            modifier = Modifier.padding(end = 16.dp),
-                            color = mainBlue,
-                            fontSize = 18.sp
-                        )
+                        Text("Male", modifier = Modifier.padding(end = 16.dp), color = mainBlue, fontSize = 18.sp)
 
                         Spacer(Modifier.width(20.dp))
 
@@ -196,39 +221,32 @@ fun SignUpContent(
             }
             Spacer(modifier = Modifier.height(23.dp))
 
-            // Sign Up button
             Button(
                 onClick = {
-                    // check if there is any error
-                    emailError = if (android.util.Patterns.EMAIL_ADDRESS.matcher(email)
-                            .matches()
-                    ) null else "Invalid email"
-                    phoneError =
-                        if (phone.all { it.isDigit() } && phone.length >= 7) null else "Invalid phone"
-                    passwordError =
-                        if (Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#\$%^&+=!]).{8,}$").matches(
-                                password
-                            )
-                        ) null else "Password too weak"
-                    confirmPasswordError =
-                        if (confirmPassword == password) null else "Passwords do not match"
+                    emailError = if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) null else "Invalid email"
+                    phoneError = if (phone.all { it.isDigit() } && phone.length >= 7) null else "Invalid phone"
+                    passwordError = if (Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#\$%^&+=!]).{8,}").matches(password)) null else "Password too weak"
+                    confirmPasswordError = if (confirmPassword == password) null else "Passwords do not match"
 
                     if (emailError == null && phoneError == null && passwordError == null && confirmPasswordError == null) {
-                        navController.navigate("bodyInfo/${selectedGender.lowercase()}?email=$email&password=$password&phone=$phone")
+                        viewModel.signUp(email, password)
+
                     }
                 },
                 colors = ButtonDefaults.buttonColors(containerColor = mainPink),
                 shape = RoundedCornerShape(50),
-                modifier = Modifier
-                    .width(200.dp)
-                    .height(50.dp),
+                modifier = Modifier.width(200.dp).height(50.dp)
             ) {
-                Text("Next", fontWeight = FontWeight.Bold, color = Color.White)
+                if (uiState == AuthUiState.Loading) {
+                    CircularProgressIndicator(color = Color.White, strokeWidth = 2.dp, modifier = Modifier.size(24.dp))
+                } else {
+                    Text("Next", fontWeight = FontWeight.Bold, color = Color.White)
+                }
             }
 
             Spacer(modifier = Modifier.height(20.dp))
-
         }
+
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -242,15 +260,10 @@ fun SignUpContent(
                     text = "Sign In",
                     color = mainPink,
                     fontWeight = FontWeight.Bold,
-                    textDecoration = TextDecoration.Underline,
-                    ////navigation to sign in
-//                    modifier = Modifier.clickable {
-//                        navController.navigate("login")
-//                    }
+                    textDecoration = TextDecoration.Underline
                 )
             }
         }
-
     }
 }
 
@@ -261,5 +274,3 @@ fun SignUpContentPreview() {
         SignUpContent(navController = rememberNavController())
     }
 }
-
-

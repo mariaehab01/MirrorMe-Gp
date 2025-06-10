@@ -1,3 +1,5 @@
+package com.example.mirrorme.presentation.auth
+
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -6,19 +8,19 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.Alignment
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.material3.Text
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material3.Text
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.mirrorme.R
 import com.example.mirrorme.ui.theme.mainBlue
 
@@ -36,15 +38,16 @@ sealed class BodyInfoItem {
 fun BodyInfoScroller(
     title: String,
     items: List<BodyInfoItem>,
+    nameMap: Map<BodyInfoItem, String> = emptyMap(),
     shape: RoundedCornerShape = RoundedCornerShape(12.dp),
-    onItemSelected: (Int) -> Unit
+    onItemSelected: (Int, String) -> Unit
 ) {
     var selectedIndex by remember { mutableStateOf(0) }
     val scrollState = rememberScrollState()
 
     Column {
         Text(
-            title,
+            text = title,
             fontSize = 22.sp,
             fontWeight = FontWeight.Medium,
             color = mainBlue,
@@ -60,6 +63,7 @@ fun BodyInfoScroller(
         ) {
             items.forEachIndexed { index, item ->
                 val isSelected = index == selectedIndex
+                val itemName = nameMap[item] ?: "Item $index"
 
                 val borderModifier = Modifier.border(
                     width = if (isSelected) 3.dp else 0.dp,
@@ -76,12 +80,12 @@ fun BodyInfoScroller(
                                 .then(borderModifier)
                                 .clickable {
                                     selectedIndex = index
-                                    onItemSelected(index)
+                                    onItemSelected(index, itemName)
                                 }
                         ) {
                             Image(
                                 painter = item.painter,
-                                contentDescription = "Body Info Image $index",
+                                contentDescription = itemName,
                                 modifier = Modifier.fillMaxSize()
                             )
                         }
@@ -95,7 +99,7 @@ fun BodyInfoScroller(
                                 .background(item.color)
                                 .clickable {
                                     selectedIndex = index
-                                    onItemSelected(index)
+                                    onItemSelected(index, itemName)
                                 }
                         )
                     }
@@ -105,21 +109,26 @@ fun BodyInfoScroller(
     }
 }
 
-
-//preview
 @Preview(showBackground = true)
 @Composable
 fun BodyInfoScrollerPreview() {
     val items = listOf(
-        BodyInfoItem.ImageItem(painter = painterResource(id = R.drawable.ic_launcher_foreground)),
-        BodyInfoItem.ColorItem(Color.Red),
-        BodyInfoItem.ColorItem(Color.Green),
-        BodyInfoItem.ColorItem(Color.Blue)
+        BodyInfoItem.ImageItem(painterResource(R.drawable.m_body1), 80.dp, 120.dp),
+        BodyInfoItem.ColorItem(Color(0xFFF8D0C6)),
+        BodyInfoItem.ColorItem(Color(0xFFFFE0B2)),
+        BodyInfoItem.ColorItem(Color(0xFFF8BF8D))
+    )
+    val nameMap = mapOf(
+        items[0] to "Athletic",
+        items[1] to "Fair1",
+        items[2] to "Fair2",
+        items[3] to "Light"
     )
 
     BodyInfoScroller(
         title = "Body Shapes",
         items = items,
-        onItemSelected = { index -> println("Selected item index: $index") }
+        nameMap = nameMap,
+        onItemSelected = { index, name -> println("Selected: $index, $name") }
     )
 }

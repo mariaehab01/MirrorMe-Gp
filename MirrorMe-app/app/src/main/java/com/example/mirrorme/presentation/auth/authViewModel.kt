@@ -17,6 +17,7 @@ sealed class AuthUiState {
 
 class AuthViewModel : ViewModel() {
     private val signUpUseCase: SignUpUseCase = ServiceLocator.signUpUseCase
+    private val saveProfileUseCase = ServiceLocator.saveProfileUseCase
 
     private val _uiState = MutableStateFlow<AuthUiState>(AuthUiState.Idle)
     val uiState: StateFlow<AuthUiState> = _uiState
@@ -32,4 +33,35 @@ class AuthViewModel : ViewModel() {
             }
         }
     }
+
+    fun saveProfile(
+        phone: String,
+        height: Int,
+        weight: Int,
+        bodyShape: String,
+        skinTone: String,
+        gender: String
+    ) {
+        viewModelScope.launch {
+            _uiState.value = AuthUiState.Loading
+
+            val result = saveProfileUseCase(
+                phone = phone,
+                height = height.toInt(),
+                weight = weight.toInt(),
+                bodyShape = bodyShape,
+                skinTone = skinTone,
+                gender = gender
+            )
+
+            _uiState.value = if (result.isSuccess) {
+                AuthUiState.Success
+            } else {
+                AuthUiState.Error(result.exceptionOrNull()?.message ?: "Unknown error")
+            }
+        }
+    }
+
+
+
 }
