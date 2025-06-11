@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,9 +25,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.mirrorme.R
 import com.example.mirrorme.ui.theme.grayPlaceholders
 import com.example.mirrorme.ui.theme.lightBlue
 
@@ -35,9 +38,18 @@ fun RoundedTextField(
     value: String,
     onValueChange: (String) -> Unit,
     placeholder: String,
-    icon: ImageVector,
+    icon: @Composable (() -> Unit)? = null,
     errorMessage: String? = null  // null = no error
 ) {
+    val defaultIcon: @Composable () -> Unit = {
+        Icon(
+            painter = painterResource(id = R.drawable.email),
+            contentDescription = "Lock Icon",
+            modifier = Modifier
+                .size(36.dp)
+                .padding(start = 16.dp)
+        )
+    }
     Column {
         TextField(
             value = value,
@@ -49,16 +61,7 @@ fun RoundedTextField(
                     fontSize = 14.sp,
                 )
             },
-            leadingIcon = {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = null,
-                    tint = grayPlaceholders,
-                    modifier = Modifier
-                        .width(60.dp)
-                        .height(20.dp)
-                )
-            },
+            leadingIcon = icon ?: defaultIcon,
             singleLine = true,
             modifier = Modifier
                 .width(302.dp)
@@ -101,6 +104,5 @@ fun RoundedTextFieldPreview() {
         value = "",
         onValueChange = {},
         placeholder = "Enter your email",
-        icon = Icons.Default.Email
     )
 }

@@ -5,6 +5,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -21,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
@@ -28,18 +30,28 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mirrorme.ui.theme.grayPlaceholders
 import com.example.mirrorme.ui.theme.lightBlue
+import com.example.mirrorme.R
 
 @Composable
 fun PasswordField(
     value: String,
     onValueChange: (String) -> Unit,
     placeholder: String,
-    icon: ImageVector,
+    icon: @Composable (() -> Unit)? = null,
     errorMessage: String? = null,
     confirmPassword: String? = null,
     confirmErrorMessage: String? = null
 ) {
     var passwordVisible by remember { mutableStateOf(false) }
+    val defaultIcon: @Composable () -> Unit = {
+        Icon(
+            painter = painterResource(id = R.drawable.lock),
+            contentDescription = "Lock Icon",
+            modifier = Modifier
+                .size(36.dp)
+                .padding(start = 16.dp)
+        )
+    }
 
     Column {
         TextField(
@@ -52,25 +64,16 @@ fun PasswordField(
                     fontSize = 14.sp,
                 )
             },
-            leadingIcon = {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = null,
-                    tint = grayPlaceholders,
-                    modifier = Modifier
-                        .width(60.dp)
-                        .height(20.dp)
-                )
-            },
+            leadingIcon = icon ?: defaultIcon,
             trailingIcon = {
                 IconButton(onClick = { passwordVisible = !passwordVisible }) {
                     Icon(
-                        imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+                        painter = painterResource(id = if (passwordVisible) R.drawable.eye_opened else R.drawable.eye_closed),
                         contentDescription = if (passwordVisible) "Hide password" else "Show password",
                         tint = grayPlaceholders,
                         modifier = Modifier
-                            .width(60.dp)
-                            .height(20.dp)
+                            .size(36.dp)
+                            .padding(end = 16.dp)
                     )
                 }
             },
@@ -121,7 +124,6 @@ fun PasswordFieldPreview() {
     PasswordField(
         value = "",
         onValueChange = {},
-        placeholder = "Enter your password",
-        icon = Icons.Default.Lock
+        placeholder = "Enter your password"
     )
 }

@@ -17,6 +17,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
@@ -27,6 +28,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.mirrorme.R
 import com.example.mirrorme.presentation.auth.composes.*
 import com.example.mirrorme.ui.theme.MirrorMeTheme
 import com.example.mirrorme.ui.theme.gradient
@@ -105,7 +107,6 @@ fun SignUpContent(
                     RoundedTextField(
                         value = email,
                         placeholder = "Enter your email",
-                        icon = Icons.Rounded.MailOutline,
                         onValueChange = { email = it },
                         errorMessage = emailError
                     )
@@ -115,7 +116,6 @@ fun SignUpContent(
                     RoundedTextField(
                         value = phone,
                         placeholder = "Enter your phone",
-                        icon = Icons.Rounded.Phone,
                         onValueChange = { phone = it },
                         errorMessage = phoneError
                     )
@@ -125,7 +125,6 @@ fun SignUpContent(
                     PasswordField(
                         value = password,
                         placeholder = "Enter your password",
-                        icon = Icons.Rounded.Lock,
                         onValueChange = { password = it },
                         errorMessage = passwordError
                     )
@@ -135,7 +134,6 @@ fun SignUpContent(
                     PasswordField(
                         value = confirmPassword,
                         placeholder = "Confirm password",
-                        icon = Icons.Rounded.Lock,
                         onValueChange = { confirmPassword = it },
                         confirmPassword = password,
                         confirmErrorMessage = confirmPasswordError
