@@ -6,11 +6,11 @@ import com.example.mirrorme.data.repository.AuthRepositoryImpl
 import com.example.mirrorme.data.repository.ProfileRepositoryImpl
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
-import io.github.jan.supabase.gotrue.gotrue
 import com.example.mirrorme.data.source.AuthRemoteSource
 import com.example.mirrorme.data.source.ProfileRemoteSource
 import com.example.mirrorme.domain.repository.AuthRepository
 import com.example.mirrorme.domain.usecase.SignUpUseCase
+import com.example.mirrorme.domain.usecase.SignInUseCase
 import io.github.jan.supabase.auth.Auth
 import io.github.jan.supabase.postgrest.Postgrest
 
@@ -48,10 +48,13 @@ object ServiceLocator {
         SignUpUseCase(authRepository)
     }
 
+    val signInUseCase: SignInUseCase by lazy {
+        SignInUseCase(authRepository)
+    }
+
     val saveProfileUseCase by lazy {
         SaveProfileUseCase(profileRepository)
     }
-
 
 
 }

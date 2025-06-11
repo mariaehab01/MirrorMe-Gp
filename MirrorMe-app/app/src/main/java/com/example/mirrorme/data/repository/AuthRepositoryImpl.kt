@@ -9,5 +9,8 @@ class AuthRepositoryImpl(
 
     override suspend fun signUp(email: String, password: String) =
         remote.signUp(email, password)
-
+    override suspend fun signIn(email: String, password: String) =
+        remote.signIn(email, password)
+    override suspend fun resetPassword(email: String) =
+        remote.resetPassword(email)
 }

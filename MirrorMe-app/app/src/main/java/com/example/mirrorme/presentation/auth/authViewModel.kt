@@ -7,6 +7,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import com.example.mirrorme.di.ServiceLocator
 import com.example.mirrorme.domain.usecase.SignUpUseCase
+import com.example.mirrorme.domain.usecase.SignInUseCase
 
 sealed class AuthUiState {
     object Idle : AuthUiState()
@@ -17,6 +18,7 @@ sealed class AuthUiState {
 
 class AuthViewModel : ViewModel() {
     private val signUpUseCase: SignUpUseCase = ServiceLocator.signUpUseCase
+    private val signInUseCase: SignInUseCase = ServiceLocator.signInUseCase
     private val saveProfileUseCase = ServiceLocator.saveProfileUseCase
 
     private val _uiState = MutableStateFlow<AuthUiState>(AuthUiState.Idle)
@@ -30,6 +32,19 @@ class AuthViewModel : ViewModel() {
                 AuthUiState.Success
             } else {
                 AuthUiState.Error(result.exceptionOrNull()?.message ?: "Unknown error")
+            }
+        }
+    }
+
+    //sign in
+    fun signIn(email: String, password: String) {
+        viewModelScope.launch {
+            _uiState.value = AuthUiState.Loading
+            val result = signInUseCase(email, password)
+            _uiState.value = if (result.isSuccess) {
+                AuthUiState.Success
+            } else {
+                AuthUiState.Error(result.exceptionOrNull()?.message ?: "Sign-in failed")
             }
         }
     }

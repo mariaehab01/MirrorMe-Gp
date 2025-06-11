@@ -1,6 +1,7 @@
 package com.example.mirrorme.presentation.auth
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -17,12 +18,14 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -57,11 +60,31 @@ class SignIn : ComponentActivity() {
 @Composable
 fun SignInContent(
     navController: NavHostController,
+    viewModel: AuthViewModel = viewModel()
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var emailError by remember { mutableStateOf<String?>(null) }
     var passwordError by remember { mutableStateOf<String?>(null) }
+
+    val uiState by viewModel.uiState.collectAsState()
+
+    // Handle success navigation
+    val context = LocalContext.current
+
+    LaunchedEffect(uiState) {
+        when (uiState) {
+            is AuthUiState.Success -> {
+                Toast.makeText(context, "Sign-in successful", Toast.LENGTH_SHORT).show()
+                //navController.navigate("home")
+            }
+            is AuthUiState.Error -> {
+                Toast.makeText(context, (uiState as AuthUiState.Error).message, Toast.LENGTH_LONG).show()
+            }
+            else -> Unit
+        }
+    }
+
 
     Box {
         PageHeader(
@@ -133,7 +156,7 @@ fun SignInContent(
 
                     if (emailError == null && passwordError == null) {
                         // TODO: Navigate to next screen after successful sign in
-                        // navController.navigate("home")
+                        viewModel.signIn(email, password)
                     }
                 },
                 colors = ButtonDefaults.buttonColors(containerColor = mainPink),
@@ -162,9 +185,9 @@ fun SignInContent(
                     color = mainPink,
                     fontWeight = FontWeight.Bold,
                     textDecoration = TextDecoration.Underline,
-//                    modifier = Modifier.clickable {
-//                        navController.navigate("signUp")
-//                    }
+                    modifier = Modifier.clickable {
+                        navController.navigate("signUp")
+                    }
                 )
             }
         }

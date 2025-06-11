@@ -30,4 +30,31 @@ class AuthRemoteSource(private val supabaseClient: SupabaseClient) {
             Result.failure(e)
         }
     }
+
+    suspend fun signIn(emailValue: String, passwordValue: String): Result<Unit> {
+        return try {
+            supabaseClient.auth.signInWith(Email) {
+                email = emailValue
+                password = passwordValue
+            }
+
+            val session = supabaseClient.auth.currentSessionOrNull()
+            if (session != null) {
+                Result.success(Unit)
+            } else {
+                Result.failure(Exception("Sign-in failed: session is null"))
+            }
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    suspend fun resetPassword(emailValue: String): Result<Unit> {
+        return try {
+            supabaseClient.auth.resetPasswordForEmail(emailValue)
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
 }
