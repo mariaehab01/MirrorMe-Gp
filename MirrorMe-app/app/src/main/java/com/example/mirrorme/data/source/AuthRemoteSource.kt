@@ -8,24 +8,26 @@ class AuthRemoteSource(private val supabaseClient: SupabaseClient) {
 
     suspend fun signUp(emailValue: String, passwordValue: String): Result<Unit> {
         return try {
-            val response = supabaseClient.auth.signUpWith(Email){
+            // Sign up
+            val signUpResult = supabaseClient.auth.signUpWith(Email) {
                 email = emailValue
                 password = passwordValue
             }
-            if (response != null) {
-                Result.success(Unit)
-            } else {
-                Result.failure(Exception("Sign-up failed: no user session"))
+
+            // Sign in (even if confirmation is required)
+            val sessionResult = supabaseClient.auth.signInWith(Email) {
+                email = emailValue
+                password = passwordValue
             }
 
+            val session = supabaseClient.auth.currentSessionOrNull()
+            if (session != null) {
+                Result.success(Unit)
+            } else {
+                Result.failure(Exception("Sign-in failed: session is null"))
+            }
         } catch (e: Exception) {
             Result.failure(e)
         }
     }
-
-//    suspend fun signIn(email: String, password: String): Result<Unit> {
-//    }
-//
-//    suspend fun isUserSignedIn(): Boolean {
-//    }
 }

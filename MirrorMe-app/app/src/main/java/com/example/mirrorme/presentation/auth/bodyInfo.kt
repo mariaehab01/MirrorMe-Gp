@@ -1,7 +1,5 @@
 package com.example.mirrorme.presentation.auth
 
-import BodyInfoScroller
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -26,45 +24,60 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.mirrorme.presentation.auth.composes.PageHeader
-import com.example.mirrorme.presentation.auth.composes.fieldsContainer
 import com.example.mirrorme.ui.theme.MirrorMeTheme
 import com.example.mirrorme.ui.theme.gradient
 import com.example.mirrorme.ui.theme.mainPink
 import com.example.mirrorme.presentation.auth.composes.BodyMeasureField
-
+import com.example.mirrorme.presentation.auth.composes.PageHeader
+import com.example.mirrorme.presentation.auth.composes.fieldsContainer
 
 @Composable
 fun BodyInfoContent(
     gender: String,
-    email: String,
-    password: String,
     phone: String,
     viewModel: AuthViewModel = viewModel(),
-    onSignUpSuccess: () -> Unit = {}
+    onSaveProfileSuccess: () -> Unit = {}
 ) {
-    val skinTones = getSkinTones()
-    val items = if (gender.lowercase() == "male") getMaleBodies() else getFemaleBodies()
+    val skinToneData = getSkinTones()
+    val bodyData = if (gender.lowercase() == "male") getMaleBodies() else getFemaleBodies()
+    val bodyMap = if (gender.lowercase() == "male") getMaleBodyMap() else getFemaleBodyMap()
+    val skinToneMap = getSkinToneMap()
+
+    var selectedBodyIndex by remember { mutableIntStateOf(0) }
+    var selectedBodyShape by remember { mutableStateOf("Hourglass") }
+    LaunchedEffect(bodyMap) {
+        selectedBodyShape = bodyMap[bodyData.firstOrNull()] ?: "Hourglass"
+    }
 
     var selectedToneIndex by remember { mutableIntStateOf(0) }
+    var selectedSkinTone by remember {
+        mutableStateOf(skinToneData.firstOrNull()?.let { skinToneMap[it] } ?: "Unknown")
+    }
     var height by remember { mutableStateOf("") }
     var weight by remember { mutableStateOf("") }
-    var signUpError by remember { mutableStateOf<String?>(null) }
+    var saveProfileError by remember { mutableStateOf<String?>(null) }
+    var showWelcomeMessage by remember { mutableStateOf(false) }
 
     val uiState by viewModel.uiState.collectAsState()
 
     LaunchedEffect(uiState) {
         when (uiState) {
-            is AuthUiState.Success -> onSignUpSuccess()
-            is AuthUiState.Error -> signUpError = (uiState as AuthUiState.Error).message
+            is AuthUiState.Success -> {
+                showWelcomeMessage = true
+                onSaveProfileSuccess()
+            }
+            is AuthUiState.Error -> saveProfileError = (uiState as AuthUiState.Error).message
             else -> {}
         }
     }
 
     Box {
-        PageHeader("Wooh,", "Almost There...",
-            modifier = Modifier.fillMaxSize().background(gradient).padding(top = 60.dp, start = 36.dp))
+        PageHeader(
+            "Wooh,", "Almost There...",
+            modifier = Modifier.fillMaxSize().background(gradient).padding(top = 60.dp, start = 36.dp)
+        )
 
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             val scrollState = rememberScrollState()
@@ -79,12 +92,24 @@ fun BodyInfoContent(
                     Spacer(modifier = Modifier.height(5.dp))
                     BodyMeasureField("Weight", "Kg", weight) { weight = it }
                     Spacer(modifier = Modifier.height(10.dp))
-                    BodyInfoScroller("Body Shape", items, RoundedCornerShape(10.dp)) {
-                        selectedToneIndex = it
+                    BodyInfoScroller(
+                        "Body Shape",
+                        bodyData,
+                        nameMap = bodyMap,
+                        RoundedCornerShape(10.dp)
+                    ) { index, name ->
+                        selectedBodyIndex = index
+                        selectedBodyShape = name
                     }
                     Spacer(modifier = Modifier.height(10.dp))
-                    BodyInfoScroller("Skin Tone", skinTones, CircleShape) {
-                        selectedToneIndex = it
+                    BodyInfoScroller(
+                        "Skin Tone",
+                        skinToneData,
+                        nameMap = skinToneMap,
+                        CircleShape
+                    ) { index, name ->
+                        selectedToneIndex = index
+                        selectedSkinTone = name
                     }
                 }
             }
@@ -94,9 +119,27 @@ fun BodyInfoContent(
             Button(
                 onClick = {
                     if (height.isNotBlank() && weight.isNotBlank()) {
-                        viewModel.signUp(email, password)
+                        val heightInt = height.toIntOrNull()
+                        val weightInt = weight.toIntOrNull()
+
+                        if (heightInt != null && weightInt != null) {
+                            if (selectedBodyIndex < bodyData.size && selectedToneIndex < skinToneData.size) {
+                                viewModel.saveProfile(
+                                    phone = phone,
+                                    height = heightInt,
+                                    weight = weightInt,
+                                    bodyShape = selectedBodyShape,
+                                    skinTone = selectedSkinTone,
+                                    gender = gender
+                                )
+                            } else {
+                                saveProfileError = "Invalid body shape or skin tone selection"
+                            }
+                        } else {
+                            saveProfileError = "Height and weight must be valid numbers"
+                        }
                     } else {
-                        signUpError = "Please enter height and weight"
+                        saveProfileError = "Please enter height and weight"
                     }
                 },
                 colors = ButtonDefaults.buttonColors(containerColor = mainPink),
@@ -110,19 +153,27 @@ fun BodyInfoContent(
                         modifier = Modifier.size(24.dp)
                     )
                 } else {
-                    Text("Sign Up", fontWeight = FontWeight.Bold, color = Color.White)
+                    Text("Save", fontWeight = FontWeight.Bold, color = Color.White)
                 }
             }
 
-            signUpError?.let {
+            saveProfileError?.let {
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(text = it, color = Color.Red, fontWeight = FontWeight.Bold)
+            }
+
+            if (showWelcomeMessage) {
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = "Welcome!",
+                    color = mainPink,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp
+                )
             }
 
             Spacer(modifier = Modifier.height(20.dp))
         }
     }
 }
-
-
 
