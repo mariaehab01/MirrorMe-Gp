@@ -23,3 +23,4 @@ val gradient = Brush.verticalGradient(
 val semiWhite = Color(0xFFF8F8F8)
 val lightBlue =Color(0xFF183D50)
 val grayPlaceholders= Color(0xFF787878)
+val off_white = Color(0xFFF0F1F9)
