@@ -38,24 +38,24 @@ import com.example.mirrorme.ui.theme.mainBlue
 import com.example.mirrorme.ui.theme.mainPink
 import com.example.mirrorme.R
 
-class SignIn : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            MirrorMeTheme {
-                val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "signIn") {
-                    composable("signIn") {
-                        SignInContent(navController = navController)
-                    }
-                    composable("signUp") {
-                        SignUpContent(navController = navController)
-                    }
-                }
-            }
-        }
-    }
-}
+//class SignIn : ComponentActivity() {
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContent {
+//            MirrorMeTheme {
+//                val navController = rememberNavController()
+//                NavHost(navController = navController, startDestination = "signIn") {
+//                    composable("signIn") {
+//                        SignInContent(navController = navController)
+//                    }
+//                    composable("signUp") {
+//                        SignUpContent(navController = navController)
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
 
 @Composable
 fun SignInContent(
@@ -69,14 +69,15 @@ fun SignInContent(
 
     val uiState by viewModel.uiState.collectAsState()
 
-    // Handle success navigation
     val context = LocalContext.current
 
     LaunchedEffect(uiState) {
         when (uiState) {
             is AuthUiState.Success -> {
                 Toast.makeText(context, "Sign-in successful", Toast.LENGTH_SHORT).show()
-                //navController.navigate("home")
+                navController.navigate("home") {
+                    popUpTo("signIn") { inclusive = true }
+                }
             }
             is AuthUiState.Error -> {
                 Toast.makeText(context, (uiState as AuthUiState.Error).message, Toast.LENGTH_LONG).show()
@@ -155,7 +156,6 @@ fun SignInContent(
                     passwordError = if (password.length >= 6) null else "Password too short"
 
                     if (emailError == null && passwordError == null) {
-                        // TODO: Navigate to next screen after successful sign in
                         viewModel.signIn(email, password)
                     }
                 },
@@ -186,7 +186,9 @@ fun SignInContent(
                     fontWeight = FontWeight.Bold,
                     textDecoration = TextDecoration.Underline,
                     modifier = Modifier.clickable {
-                        navController.navigate("signUp")
+                        navController.navigate("signUp") {
+                            popUpTo("signIn") { inclusive = true }
+                        }
                     }
                 )
             }

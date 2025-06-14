@@ -47,7 +47,7 @@ fun FirstScreen(navController: NavHostController) {
             modifier = Modifier
                 .fillMaxWidth()
                 .fillMaxHeight()
-                .padding(top = 270.dp)
+                .padding(top = 240.dp)
                 .clip(RoundedCornerShape(topStart = 60.dp, topEnd = 60.dp))
                 .background(off_white)
                 .padding(horizontal = 32.dp),
@@ -61,8 +61,6 @@ fun FirstScreen(navController: NavHostController) {
                     .padding(bottom = 30.dp)
                     .align(Alignment.CenterHorizontally)
             )
-
-            Spacer(modifier = Modifier.height(8.dp))
 
             Image(
                 painter = painterResource(id = R.drawable.mirrorme_bg),

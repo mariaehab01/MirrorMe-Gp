@@ -46,22 +46,22 @@ import com.example.mirrorme.ui.theme.mainBlue
 import com.example.mirrorme.ui.theme.popColor
 import kotlinx.coroutines.delay
 
-@SuppressLint("CustomSplashScreen")
-class SplashActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        super.onCreate(savedInstanceState)
-
-        setContent {
-            MirrorMeTheme {
-                SplashScreenUI {
-                    startActivity(Intent(this, SignUp::class.java))
-                    finish()
-                }
-            }
-        }
-    }
-}
+//@SuppressLint("CustomSplashScreen")
+//class SplashActivity : ComponentActivity() {
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//        super.onCreate(savedInstanceState)
+//
+//        setContent {
+//            MirrorMeTheme {
+//                SplashScreenUI {
+//                    startActivity(Intent(this, SignUp::class.java))
+//                    finish()
+//                }
+//            }
+//        }
+//    }
+//}
 
 @Composable
 fun SplashScreenUI(onTimeout: () -> Unit = {}) {

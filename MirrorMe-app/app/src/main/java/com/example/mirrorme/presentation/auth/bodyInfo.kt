@@ -1,5 +1,6 @@
 package com.example.mirrorme.presentation.auth
 
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -21,11 +22,13 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.rememberNavController
 import com.example.mirrorme.ui.theme.MirrorMeTheme
 import com.example.mirrorme.ui.theme.gradient
 import com.example.mirrorme.ui.theme.mainPink
@@ -61,10 +64,11 @@ fun BodyInfoContent(
     var showWelcomeMessage by remember { mutableStateOf(false) }
 
     val uiState by viewModel.uiState.collectAsState()
-
+    val context = LocalContext.current
     LaunchedEffect(uiState) {
         when (uiState) {
             is AuthUiState.Success -> {
+                Toast.makeText(context, "Sign-up successful", Toast.LENGTH_SHORT).show()
                 showWelcomeMessage = true
                 onSaveProfileSuccess()
             }

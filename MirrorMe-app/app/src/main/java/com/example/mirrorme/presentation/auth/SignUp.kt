@@ -1,9 +1,11 @@
 package com.example.mirrorme.presentation.auth
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -17,6 +19,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
@@ -31,6 +34,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.mirrorme.R
 import com.example.mirrorme.presentation.auth.composes.*
+import com.example.mirrorme.presentation.navigation.AppNavHost
 import com.example.mirrorme.ui.theme.MirrorMeTheme
 import com.example.mirrorme.ui.theme.gradient
 import com.example.mirrorme.ui.theme.mainBlue
@@ -42,22 +46,23 @@ class SignUp : ComponentActivity() {
         setContent {
             MirrorMeTheme {
                 val navController = rememberNavController()
-                NavHost(navController = navController, startDestination = "signUp") {
-                    composable("signUp") {
-                        SignUpContent(navController = navController)
-                    }
-                    composable(
-                        route = "bodyInfo/{gender}?email={email}&password={password}&phone={phone}",
-                        arguments = listOf(
-                            navArgument("gender") { defaultValue = "unknown" },
-                            navArgument("phone") { defaultValue = "" }
-                        )
-                    ) { backStackEntry ->
-                        val gender = backStackEntry.arguments?.getString("gender") ?: "unknown"
-                        val phone = backStackEntry.arguments?.getString("phone") ?: ""
-                        BodyInfoContent(gender, phone)
-                    }
-                }
+                AppNavHost(navController)
+//                NavHost(navController = navController, startDestination = "signUp") {
+//                    composable("signUp") {
+//                        SignUpContent(navController = navController)
+//                    }
+//                    composable(
+//                        route = "bodyInfo/{gender}?email={email}&password={password}&phone={phone}",
+//                        arguments = listOf(
+//                            navArgument("gender") { defaultValue = "unknown" },
+//                            navArgument("phone") { defaultValue = "" }
+//                        )
+//                    ) { backStackEntry ->
+//                        val gender = backStackEntry.arguments?.getString("gender") ?: "unknown"
+//                        val phone = backStackEntry.arguments?.getString("phone") ?: ""
+//                        BodyInfoContent(gender, phone)
+//                    }
+//                }
             }
         }
     }
@@ -258,12 +263,18 @@ fun SignUpContent(
                     text = "Sign In",
                     color = mainPink,
                     fontWeight = FontWeight.Bold,
-                    textDecoration = TextDecoration.Underline
+                    textDecoration = TextDecoration.Underline,
+                    modifier = Modifier.clickable {
+                        navController.navigate("signIn") {
+                            popUpTo("signUp") { inclusive = true }
+                        }
+                    }
                 )
             }
         }
     }
 }
+
 
 @Preview(showBackground = true)
 @Composable
