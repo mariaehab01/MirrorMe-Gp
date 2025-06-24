@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MirrorMe"
         android:forceDarkAllowed="false">
         <activity
-            android:name=".presentation.splash.SplashActivity"
+            android:name=".MainActivity"
             android:theme="@style/Theme.MirrorMe"
             android:exported="true">
             <intent-filter>

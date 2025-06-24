@@ -37,6 +37,7 @@ import com.example.mirrorme.ui.theme.lightBlue
 import com.example.mirrorme.ui.theme.mainBlue
 import com.example.mirrorme.ui.theme.mainPink
 import com.example.mirrorme.R
+import com.example.mirrorme.di.ServiceLocator
 
 //class SignIn : ComponentActivity() {
 //    override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,6 +75,7 @@ fun SignInContent(
     LaunchedEffect(uiState) {
         when (uiState) {
             is AuthUiState.Success -> {
+                ServiceLocator.setLastScreenUseCase("home")
                 Toast.makeText(context, "Sign-in successful", Toast.LENGTH_SHORT).show()
                 navController.navigate("home") {
                     popUpTo("signIn") { inclusive = true }
@@ -186,6 +188,7 @@ fun SignInContent(
                     fontWeight = FontWeight.Bold,
                     textDecoration = TextDecoration.Underline,
                     modifier = Modifier.clickable {
+                        ServiceLocator.setLastScreenUseCase("signUp")
                         navController.navigate("signUp") {
                             popUpTo("signIn") { inclusive = true }
                         }

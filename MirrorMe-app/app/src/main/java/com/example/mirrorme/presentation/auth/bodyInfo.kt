@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.rememberNavController
+import com.example.mirrorme.di.ServiceLocator
 import com.example.mirrorme.ui.theme.MirrorMeTheme
 import com.example.mirrorme.ui.theme.gradient
 import com.example.mirrorme.ui.theme.mainPink
@@ -68,6 +69,7 @@ fun BodyInfoContent(
     LaunchedEffect(uiState) {
         when (uiState) {
             is AuthUiState.Success -> {
+                ServiceLocator.setLastScreenUseCase("home")
                 Toast.makeText(context, "Sign-up successful", Toast.LENGTH_SHORT).show()
                 showWelcomeMessage = true
                 onSaveProfileSuccess()

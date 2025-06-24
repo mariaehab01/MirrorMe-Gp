@@ -2,13 +2,20 @@ package com.example.mirrorme.di
 
 
 import SaveProfileUseCase
+import android.content.Context
 import com.example.mirrorme.data.repository.AuthRepositoryImpl
+import com.example.mirrorme.data.repository.ProductRepositoryImpl
 import com.example.mirrorme.data.repository.ProfileRepositoryImpl
+import com.example.mirrorme.data.session.SessionPreferences
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import com.example.mirrorme.data.source.AuthRemoteSource
+import com.example.mirrorme.data.source.ProductRemoteSource
 import com.example.mirrorme.data.source.ProfileRemoteSource
 import com.example.mirrorme.domain.repository.AuthRepository
+import com.example.mirrorme.domain.usecase.GetLastScreenUseCase
+import com.example.mirrorme.domain.usecase.GetProductsUseCase
+import com.example.mirrorme.domain.usecase.SetLastScreenUseCase
 import com.example.mirrorme.domain.usecase.SignUpUseCase
 import com.example.mirrorme.domain.usecase.SignInUseCase
 import io.github.jan.supabase.auth.Auth
@@ -56,5 +63,26 @@ object ServiceLocator {
         SaveProfileUseCase(profileRepository)
     }
 
+    val productRemoteSource by lazy {
+        ProductRemoteSource(supabaseClient)
+    }
 
+    val productRepository by lazy {
+        ProductRepositoryImpl(productRemoteSource)
+    }
+
+    val getProductsUseCase by lazy {
+        GetProductsUseCase(productRepository)
+    }
+
+    // -- Session Persistence --
+    private lateinit var sessionPreferences: SessionPreferences
+    lateinit var setLastScreenUseCase: SetLastScreenUseCase
+    lateinit var getLastScreenUseCase: GetLastScreenUseCase
+
+    fun init(context: Context) {
+        sessionPreferences = SessionPreferences(context)
+        setLastScreenUseCase = SetLastScreenUseCase(sessionPreferences)
+        getLastScreenUseCase = GetLastScreenUseCase(sessionPreferences)
+    }
 }

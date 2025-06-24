@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.mirrorme.R
-import com.example.mirrorme.presentation.home.model.Product
 import com.example.mirrorme.presentation.onboarding.FirstScreen
 import com.example.mirrorme.ui.theme.lightBlue
 import com.example.mirrorme.ui.theme.lightTeal

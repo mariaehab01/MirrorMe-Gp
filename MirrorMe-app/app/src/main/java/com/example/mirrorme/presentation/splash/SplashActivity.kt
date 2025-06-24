@@ -1,92 +1,67 @@
 package com.example.mirrorme.presentation.splash
 
-import android.annotation.SuppressLint
-import android.content.Intent
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.LinearOutSlowInEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateDpAsState
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.keyframes
-import androidx.compose.animation.core.tween
-import androidx.compose.animation.fadeIn
-import androidx.compose.animation.fadeOut
-import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.*
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.*
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.em
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.*
+import androidx.navigation.NavHostController
 import com.example.mirrorme.R
-import com.example.mirrorme.presentation.auth.SignUp
-import com.example.mirrorme.ui.theme.MirrorMeTheme
-import com.example.mirrorme.ui.theme.background
-import com.example.mirrorme.ui.theme.mainBlue
-import com.example.mirrorme.ui.theme.popColor
+import com.example.mirrorme.di.ServiceLocator
+import com.example.mirrorme.ui.theme.*
+
 import kotlinx.coroutines.delay
 
-//@SuppressLint("CustomSplashScreen")
-//class SplashActivity : ComponentActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//        super.onCreate(savedInstanceState)
-//
-//        setContent {
-//            MirrorMeTheme {
-//                SplashScreenUI {
-//                    startActivity(Intent(this, SignUp::class.java))
-//                    finish()
-//                }
-//            }
-//        }
-//    }
-//}
+@Composable
+fun SplashScreen(navController: NavHostController) {
+    SplashScreenUI {
+        val lastScreen = ServiceLocator.getLastScreenUseCase()
+        val targetScreen = when (lastScreen) {
+            "firstScreen" -> "firstScreen"
+            "signUp" -> "signUp"
+            "signIn" -> "signIn"
+            "home" -> "home"
+            else -> "firstScreen"
+        }
+
+        navController.navigate(targetScreen) {
+            popUpTo("splash") { inclusive = true }
+        }
+    }
+}
 
 @Composable
 fun SplashScreenUI(onTimeout: () -> Unit = {}) {
     var isContentVisible by remember { mutableStateOf(false) }
     var shouldBlink by remember { mutableStateOf(false) }
-    var screenWidthPx = 0
     var startSlideOut by remember { mutableStateOf(false) }
 
     val slideOffsetX by animateDpAsState(
-        targetValue = if (startSlideOut) (-1000).dp else 0.dp, // Pull to the left
+        targetValue = if (startSlideOut) (-1000).dp else 0.dp,
         animationSpec = tween(durationMillis = 1600, easing = LinearOutSlowInEasing),
         finishedListener = {
-            if (startSlideOut) {
-                onTimeout() // Trigger home screen transition
-            }
+            if (startSlideOut) onTimeout()
         }
     )
+
     val textColor by animateColorAsState(
         targetValue = if (shouldBlink) popColor else mainBlue,
         animationSpec = infiniteRepeatable(
             animation = keyframes {
                 durationMillis = 2400
-                popColor at 0       // Hold popColor
+                popColor at 0
                 popColor at 1200
-                mainBlue at 2400    // Transition to blue
+                mainBlue at 2400
             },
             repeatMode = RepeatMode.Restart
         )
@@ -95,24 +70,16 @@ fun SplashScreenUI(onTimeout: () -> Unit = {}) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .onSizeChanged { size ->
-                screenWidthPx = size.width
-            }.offset(x = slideOffsetX)
+            .offset(x = slideOffsetX)
     ) {
-        Surface(
-            modifier = Modifier.fillMaxSize(),
-            color = background
-        ) {
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center
-            ) {
+        Surface(modifier = Modifier.fillMaxSize(), color = background) {
+            Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
                 AnimatedVisibility(
                     visible = isContentVisible,
                     enter = slideInHorizontally(
-                        animationSpec = tween(durationMillis = 1000, easing = LinearOutSlowInEasing),
+                        animationSpec = tween(1000, easing = LinearOutSlowInEasing),
                         initialOffsetX = { -it }
-                    ) + fadeIn(animationSpec = tween(1000)),
+                    ) + fadeIn(),
                     exit = fadeOut()
                 ) {
                     Image(
@@ -128,22 +95,21 @@ fun SplashScreenUI(onTimeout: () -> Unit = {}) {
                 AnimatedVisibility(
                     visible = isContentVisible,
                     enter = slideInHorizontally(
-                        animationSpec = tween(durationMillis = 1000, easing = LinearOutSlowInEasing),
+                        animationSpec = tween(1000, easing = LinearOutSlowInEasing),
                         initialOffsetX = { it }
-                    ) + fadeIn(animationSpec = tween(100)), // make it start from the right most side
+                    ) + fadeIn(),
                     exit = fadeOut()
                 ) {
-                    Box(modifier = Modifier.offset(x = 35.dp)) { //control the place of the beginning of the slogan
+                    Box(modifier = Modifier.offset(x = 35.dp)) {
                         if (textColor == popColor) {
-                            val glowColor = popColor.copy(alpha = 0.25f)// shadow spreading
+                            val glowColor = popColor.copy(alpha = 0.25f)
                             val offsets = listOf(
                                 Offset(-1f, -1f), Offset(1f, -1f),
                                 Offset(-1f, 1f), Offset(1f, 1f),
                                 Offset(0f, -1f), Offset(0f, 1f),
                                 Offset(-1f, 0f), Offset(1f, 0f)
                             )
-
-                            offsets.forEach { offset ->
+                            offsets.forEach {
                                 Text(
                                     text = "Virtual Try On",
                                     style = TextStyle(
@@ -154,14 +120,10 @@ fun SplashScreenUI(onTimeout: () -> Unit = {}) {
                                         lineHeight = 29.sp,
                                         textAlign = TextAlign.Center
                                     ),
-                                    modifier = Modifier.offset(
-                                        x = offset.x.dp,
-                                        y = offset.y.dp
-                                    )
+                                    modifier = Modifier.offset(x = it.x.dp, y = it.y.dp)
                                 )
                             }
                         }
-                        // Actual text remains in its normal state
                         Text(
                             text = "Virtual Try On",
                             style = TextStyle(
@@ -179,20 +141,14 @@ fun SplashScreenUI(onTimeout: () -> Unit = {}) {
                 LaunchedEffect(Unit) {
                     delay(500)
                     isContentVisible = true
-                    delay(1400) // Delay before starting the blink effect
+                    delay(1400)
                     shouldBlink = true
-                    delay(4200)
-                    startSlideOut=true
+                    delay(3800)
+                    startSlideOut = true
+                    delay(100)
+                    onTimeout()
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true, backgroundColor = 0xFFFFFFFF)
-@Composable
-fun SplashScreenPreview() {
-    MirrorMeTheme {
-        SplashScreenUI()
     }
 }

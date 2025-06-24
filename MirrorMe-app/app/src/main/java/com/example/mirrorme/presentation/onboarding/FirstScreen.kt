@@ -21,6 +21,7 @@ import androidx.compose.ui.unit.*
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.mirrorme.R
+import com.example.mirrorme.di.ServiceLocator
 import com.example.mirrorme.presentation.onboarding.composes.RoundedButton
 import com.example.mirrorme.presentation.onboarding.composes.SocialIcon
 import com.example.mirrorme.ui.theme.mainBlue
@@ -83,7 +84,10 @@ fun FirstScreen(navController: NavHostController) {
                 text = "Sign In",
                 backgroundColor = mainPink,
                 textColor = Color.White,
-                onClick = { navController.navigate("signIn") }
+                onClick = {
+                    ServiceLocator.setLastScreenUseCase("signIn")
+                    navController.navigate("signIn")
+                }
             )
 
             Spacer(modifier = Modifier.height(25.dp))
@@ -92,7 +96,10 @@ fun FirstScreen(navController: NavHostController) {
                 text = "Sign Up",
                 backgroundColor = mainBlue,
                 textColor = Color.White,
-                onClick = { navController.navigate("signUp") }
+                onClick = {
+                    ServiceLocator.setLastScreenUseCase("signUp")
+                    navController.navigate("signUp")
+                }
             )
 
             Spacer(modifier = Modifier.height(24.dp))

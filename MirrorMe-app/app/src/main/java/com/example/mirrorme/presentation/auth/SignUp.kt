@@ -33,6 +33,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.mirrorme.R
+import com.example.mirrorme.di.ServiceLocator
 import com.example.mirrorme.presentation.auth.composes.*
 import com.example.mirrorme.presentation.navigation.AppNavHost
 import com.example.mirrorme.ui.theme.MirrorMeTheme
@@ -265,6 +266,7 @@ fun SignUpContent(
                     fontWeight = FontWeight.Bold,
                     textDecoration = TextDecoration.Underline,
                     modifier = Modifier.clickable {
+                        ServiceLocator.setLastScreenUseCase("signIn")
                         navController.navigate("signIn") {
                             popUpTo("signUp") { inclusive = true }
                         }

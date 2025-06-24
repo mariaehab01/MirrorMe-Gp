@@ -17,16 +17,17 @@ import androidx.navigation.compose.rememberNavController
 import com.example.mirrorme.presentation.home.HomeScreen
 import com.example.mirrorme.presentation.navigation.AppNavHost
 import com.example.mirrorme.ui.theme.MirrorMeTheme
+import com.example.mirrorme.di.ServiceLocator
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         // Force light mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        ServiceLocator.init(applicationContext)
         super.onCreate(savedInstanceState)
 
         setContent {
             MirrorMeTheme {
-//                HomeScreen(navController = rememberNavController())
                 AppNavHost()
             }
         }

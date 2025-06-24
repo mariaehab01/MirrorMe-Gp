@@ -2,9 +2,7 @@
 <resources>
     <!-- Main app theme -->
     <style name="Theme.MirrorMe" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
-
-
-
 
 </resources>
