@@ -29,6 +29,9 @@ import com.example.mirrorme.presentation.onboarding.FirstScreen
 import com.example.mirrorme.ui.theme.off_white
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import com.example.mirrorme.di.ServiceLocator
 
 @Composable
@@ -36,19 +39,36 @@ fun HomeScreen(navController: NavHostController) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
 
-    val viewModel: HomeViewModel = viewModel() // ✅ NEW
-    val products by viewModel.products.collectAsState() // ✅ NEW
+    val viewModel: HomeViewModel = viewModel()
+    val products by viewModel.products.collectAsState()
+
+    var searchQuery by remember { mutableStateOf("") }
+
+//    val filteredProducts = products.filter {
+//        it.name.contains(searchQuery, ignoreCase = true)
+//    }
+
+    var selectedCategory by remember { mutableStateOf<String?>(null) }
+    var selectedGender by remember { mutableStateOf<String?>(null) }
+
 
     LaunchedEffect(Unit) {
-        viewModel.loadProducts() // ✅ NEW
+        viewModel.loadProducts()
     }
 
     LaunchedEffect(products) {
         Log.d("HomeScreen", "Products received: ${products.size}")
     }
 
+    val filteredProducts = products.filter { product ->
+        val matchesSearch = searchQuery.isBlank() || product.name.contains(searchQuery, ignoreCase = true)
+        val matchesCategory = selectedCategory == null || product.category.equals(selectedCategory, ignoreCase = true) || product.category.equals("other", ignoreCase = true)
+        val matchesGender = selectedGender == null || product.gender.equals(selectedGender, ignoreCase = true) || product.gender.equals("unisex", ignoreCase = true)
+        matchesSearch && matchesCategory && matchesGender
+    }
+
     ModalNavigationDrawer(
-        drawerState = drawerState,               // ← controls open / close
+        drawerState = drawerState,
         drawerContent = {
             Box(
                 modifier = Modifier
@@ -58,6 +78,13 @@ fun HomeScreen(navController: NavHostController) {
                     .background(off_white)
             ) {
                 AppDrawerContent(
+                    selectedCategory = selectedCategory,
+                    selectedGender = selectedGender,
+                    onCategorySelected = { category, gender ->
+                        selectedCategory = category
+                        selectedGender = gender
+                        scope.launch { drawerState.close() }
+                    },
                     onLogoutClick = {
                         ServiceLocator.setLastScreenUseCase("signIn")
                         navController.navigate("SignIn") {
@@ -78,8 +105,17 @@ fun HomeScreen(navController: NavHostController) {
             })
             TitleSection(category = "Home")
             BannerSection(bannerRes = R.drawable.home_banner)
-            SearchBarSection()
-
+            SearchBarSection(
+                searchQuery = searchQuery,
+                onQueryChange = { searchQuery = it },
+                filtersActive = selectedCategory != null || selectedGender != null || searchQuery.isNotBlank(),
+                onClearFilters = {
+                    selectedCategory = null
+                    selectedGender = null
+                    searchQuery = ""
+                    scope.launch { drawerState.close() } // ✅ closes drawer if opened
+                }
+            )
             Spacer(modifier = Modifier.height(16.dp))
 
             LazyVerticalGrid(
@@ -90,7 +126,7 @@ fun HomeScreen(navController: NavHostController) {
                     .padding(horizontal = 16.dp)
                     .weight(1f)
             ) {
-                items(products) { item -> // ✅ CHANGED from items = static list
+                items(filteredProducts) { item ->
                     Log.d("HomeScreen", "Rendering item: ${item.name} - ${item.imageUrl}")
                     ProductItem(item = item) {
                         // TODO: navigate to product details

@@ -3,11 +3,13 @@ package com.example.mirrorme.presentation.home.composes
 import android.R.attr.value
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FilterList
+import androidx.compose.material.icons.filled.FilterListOff
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LocalTextStyle
@@ -32,9 +34,12 @@ import com.example.mirrorme.ui.theme.mainBlue
 import androidx.compose.ui.text.TextStyle
 
 @Composable
-fun SearchBarSection() {
-    var searchQuery by remember { mutableStateOf("") }
-
+fun SearchBarSection(
+    searchQuery: String,
+    onQueryChange: (String) -> Unit,
+    filtersActive: Boolean,
+    onClearFilters: () -> Unit
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -48,7 +53,7 @@ fun SearchBarSection() {
                 .height(40.dp)
                 .border(1.5.dp, mainBlue, RoundedCornerShape(18.dp))
                 .background(light_grey, RoundedCornerShape(18.dp))
-                .padding(horizontal = 12.dp, vertical = 4.dp), // vertical padding helps with alignment
+                .padding(horizontal = 12.dp, vertical = 4.dp),
             contentAlignment = Alignment.CenterStart
         ) {
             Row(
@@ -58,7 +63,7 @@ fun SearchBarSection() {
                 // TextField
                 BasicTextField(
                     value = searchQuery,
-                    onValueChange = { searchQuery = it },
+                    onValueChange = onQueryChange,
                     singleLine = true,
                     modifier = Modifier
                         .weight(1f)
@@ -89,10 +94,12 @@ fun SearchBarSection() {
         }
 
         Icon(
-            imageVector = Icons.Filled.FilterList,
-            contentDescription = "Filter",
-            tint = lightBlue,
-            modifier = Modifier.size(30.dp)
+            imageVector = if (filtersActive) Icons.Default.FilterListOff else Icons.Default.FilterList,
+            contentDescription = if (filtersActive) "Clear Filters" else "Filter",
+            tint = if (filtersActive) Color.Red else lightBlue,
+            modifier = Modifier
+                .size(30.dp)
+                .clickable { onClearFilters() }
         )
     }
 }

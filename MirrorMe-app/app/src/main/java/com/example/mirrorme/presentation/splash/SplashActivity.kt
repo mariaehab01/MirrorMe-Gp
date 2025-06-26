@@ -48,10 +48,7 @@ fun SplashScreenUI(onTimeout: () -> Unit = {}) {
 
     val slideOffsetX by animateDpAsState(
         targetValue = if (startSlideOut) (-1000).dp else 0.dp,
-        animationSpec = tween(durationMillis = 1600, easing = LinearOutSlowInEasing),
-        finishedListener = {
-            if (startSlideOut) onTimeout()
-        }
+        animationSpec = tween(durationMillis = 1600, easing = LinearOutSlowInEasing)
     )
 
     val textColor by animateColorAsState(
@@ -145,7 +142,6 @@ fun SplashScreenUI(onTimeout: () -> Unit = {}) {
                     shouldBlink = true
                     delay(3800)
                     startSlideOut = true
-                    delay(100)
                     onTimeout()
                 }
             }

@@ -22,39 +22,13 @@ import com.example.mirrorme.ui.theme.mainBlue
 
 @Composable
 fun ProductItem(item: Product, onClick: () -> Unit = {}) {
-//    Column(horizontalAlignment = Alignment.CenterHorizontally,
-//        modifier = Modifier
-//        .clickable { onClick(
-//            //navigate to product details
-//
-//        ) }
-//        .padding(4.dp)
-//    ){
-//        Image(
-//            painter = painterResource(id = item.imageRes),
-//            contentDescription = item.name,
-//            modifier = Modifier
-//                .fillMaxWidth()
-//                .height(160.dp)
-//                .clip(RoundedCornerShape(16.dp))
-//                .border(
-//                    width = 1.dp,
-//                    color = mainBlue,
-//                    shape = RoundedCornerShape(16.dp)
-//                ),
-//            contentScale = ContentScale.Crop
-//        )
-//        Spacer(modifier = Modifier.height(6.dp))
-//        Text(item.name, fontSize = 14.sp)
-//        Text(item.price, fontSize = 13.sp, color = MaterialTheme.colorScheme.onBackground.copy(alpha = 0.6f))
-//    }
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.clickable { onClick() }
     ) {
         Log.d("ProductImage", "Attempting to load: ${item.imageUrl}")
 
-        AsyncImage( // ✅ loads image from URL
+        AsyncImage(
             model = item.imageUrl,
             contentDescription = item.name,
             modifier = Modifier

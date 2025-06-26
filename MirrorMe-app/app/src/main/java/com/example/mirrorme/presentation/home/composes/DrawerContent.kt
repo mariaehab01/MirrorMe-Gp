@@ -37,7 +37,12 @@ import com.example.mirrorme.ui.theme.off_white
 import com.example.mirrorme.ui.theme.popColor
 
 @Composable
-fun AppDrawerContent(onLogoutClick: () -> Unit) {
+fun AppDrawerContent(
+    selectedCategory: String?,
+    selectedGender: String?,
+    onCategorySelected: (String?, String?) -> Unit,
+    onLogoutClick: () -> Unit
+) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -76,11 +81,21 @@ fun AppDrawerContent(onLogoutClick: () -> Unit) {
                 color = mainBlue
             )
         }
-        DrawerItem("Tops", iconResId = R.drawable.tops, color = mainPink, selected = true)
-        DrawerItem("Skirts", iconResId = R.drawable.skirts, color = mainPink)
-        DrawerItem("Pants", iconResId = R.drawable.pants, color = mainPink)
-        DrawerItem("Dresses", iconResId = R.drawable.dresses, color = mainPink)
-        DrawerItem("Jackets", iconResId = R.drawable.jackets, color = mainPink)
+        DrawerItem("Tops", R.drawable.tops, mainPink) {
+            onCategorySelected("tops", "female")
+        }
+        DrawerItem("Skirts", R.drawable.skirts, mainPink) {
+            onCategorySelected("skirts", "female")
+        }
+        DrawerItem("Pants", R.drawable.pants, mainPink) {
+            onCategorySelected("pants", "female")
+        }
+        DrawerItem("Dresses", R.drawable.dresses, mainPink) {
+            onCategorySelected("dresses", "female")
+        }
+        DrawerItem("Jackets", R.drawable.jackets, mainPink) {
+            onCategorySelected("jackets", "female")
+        }
 
         Spacer(modifier = Modifier.height(24.dp))
 
@@ -103,9 +118,15 @@ fun AppDrawerContent(onLogoutClick: () -> Unit) {
                 color = mainBlue
             )
         }
-        DrawerItem("T-shirts", iconResId = R.drawable.tops, color = mainBlue)
-        DrawerItem("Pants", iconResId = R.drawable.pants, color = mainBlue)
-        DrawerItem("Jackets", iconResId = R.drawable.jackets, color = mainBlue)
+        DrawerItem("T-shirts", R.drawable.tops, mainBlue) {
+            onCategorySelected("t-shirts", "male")
+        }
+        DrawerItem("Pants", R.drawable.pants, mainBlue) {
+            onCategorySelected("pants", "male")
+        }
+        DrawerItem("Jackets", R.drawable.jackets, mainBlue) {
+            onCategorySelected("jackets", "male")
+        }
 
         Spacer(modifier = Modifier.weight(1f))
 
@@ -137,13 +158,27 @@ fun AppDrawerContent(onLogoutClick: () -> Unit) {
 }
 
 @Composable
-fun DrawerItem(label: String, iconResId: Int, color: Color, selected: Boolean = false) {
-    val bgColor = if (selected) lightTeal else Color.Transparent
-    val borderColor = if (selected) popColor else Color.Transparent
+fun DrawerItem(label: String, iconResId: Int, color: Color, onClick: () -> Unit ) {
+    var isTapped by remember { mutableStateOf(false) }
+
+    val bgColor = if (isTapped) lightTeal else Color.Transparent
+    val borderColor = if (isTapped) popColor else Color.Transparent
+
+    LaunchedEffect(isTapped) {
+        if (isTapped) {
+            // Remove highlight after short delay (300ms)
+            kotlinx.coroutines.delay(300)
+            isTapped = false
+        }
+    }
 
     Box(
         modifier = Modifier
             .fillMaxWidth()
+            .clickable {
+                isTapped = true
+                onClick()
+            }
             .background(bgColor, RoundedCornerShape(16.dp))
             .border(1.dp, borderColor, RoundedCornerShape(16.dp))
             .padding(horizontal = 12.dp, vertical = 4.dp)
