@@ -1,6 +1,7 @@
 package com.example.mirrorme.data.repository
 
 import com.example.mirrorme.data.source.ProfileRemoteSource
+import com.example.mirrorme.domain.model.Profile
 import com.example.mirrorme.domain.repository.ProfileRepository
 
 class ProfileRepositoryImpl(
@@ -14,4 +15,7 @@ class ProfileRepositoryImpl(
         skinTone: String,
         gender: String
     ) = remote.saveProfile(phone, height, weight, bodyShape, skinTone, gender)
+    override suspend fun getProfile(): Result<Profile?> {
+        return remote.getProfile()
+    }
 }

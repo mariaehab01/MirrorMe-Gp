@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Declare features -->
+    <uses-feature android:name="android.hardware.camera" />
+
+    <!-- Declare permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -22,11 +27,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".presentation.auth.SignUp"
-            android:exported="false"
-            android:theme="@style/Theme.MirrorMe">
+            android:name=".presentation.cameraTryOn.CameraTryOnActivity"
+            android:theme="@style/Theme.MirrorMe"
+            android:exported="false" />
 
-        </activity>
 
 
     </application>

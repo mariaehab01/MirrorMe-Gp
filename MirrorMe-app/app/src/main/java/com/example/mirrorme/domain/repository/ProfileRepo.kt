@@ -1,5 +1,7 @@
 package com.example.mirrorme.domain.repository
 
+import com.example.mirrorme.domain.model.Profile
+
 interface ProfileRepository {
     suspend fun saveProfile(
         phone: String,
@@ -9,4 +11,5 @@ interface ProfileRepository {
         skinTone: String,
         gender: String
     ): Result<Unit>
+    suspend fun getProfile(): Result<Profile?>
 }

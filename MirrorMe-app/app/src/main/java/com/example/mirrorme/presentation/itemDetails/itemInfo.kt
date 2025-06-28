@@ -1,6 +1,7 @@
 package com.example.mirrorme.presentation.itemDetails
 
 import ProductViewModel
+import android.content.Intent
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -9,10 +10,13 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import com.example.mirrorme.data.tryOn.colorList
+import com.example.mirrorme.presentation.cameraTryOn.CameraTryOnActivity
 import com.example.mirrorme.presentation.itemDetails.composes.ActionButtons
 import com.example.mirrorme.presentation.itemDetails.composes.CodeAndReviews
 import com.example.mirrorme.presentation.itemDetails.composes.ColorSizeQuantitySection
@@ -23,9 +27,14 @@ import com.example.mirrorme.presentation.itemDetails.composes.ProductImage
 import com.example.mirrorme.presentation.itemDetails.composes.ScrollableRowWithArrows
 import com.example.mirrorme.presentation.itemDetails.composes.TopBar
 import com.example.mirrorme.ui.theme.*
+import androidx.compose.ui.graphics.Color as ComposeColor
+
+val colors = colorList.map { ComposeColor(it) }
+
 
 @Composable
 fun ItemInfoScreen(productId: String, navController: NavHostController) {
+    val context = LocalContext.current
     val viewModel = remember { ProductViewModel() }
     val product = viewModel.productUiState
     val isLoading = viewModel.isLoading
@@ -42,7 +51,7 @@ fun ItemInfoScreen(productId: String, navController: NavHostController) {
     var showOutfitContainer by remember { mutableStateOf(false) }
     val scrollState = rememberScrollState()
 
-    val colors = listOf(Color.Red, Color.White, Color.Gray, Color.Green, Color.Blue, Color.Yellow)
+    val colors = colorList.map { ComposeColor(it) }
     val sizes = listOf("S", "M", "L", "XL", "XXL", "3XL", "4XL")
 
     LaunchedEffect(productId) {
@@ -121,7 +130,9 @@ fun ItemInfoScreen(productId: String, navController: NavHostController) {
 
                     // -------- Buttons Row --------
                     ActionButtons(
-                        onTryOn = { /* Handle Add to Cart */ },
+                        onTryOn = {val intent = Intent(context, CameraTryOnActivity::class.java)
+                            context.startActivity(intent)
+                                  },
                         onAddToBag = { /* Handle Buy Now */ },
                         onGenerateOutfit = { showOutfitContainer = true }
                     )

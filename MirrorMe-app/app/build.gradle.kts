@@ -67,5 +67,30 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:postgrest-kt:1.3.1")
     implementation("io.coil-kt:coil-compose:2.6.0")
 
+    // Navigation library
+    implementation ("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation ("androidx.navigation:navigation-ui-ktx:2.5.3")
+
+    // CameraX core library
+    implementation ("androidx.camera:camera-core:1.2.0-alpha02")
+
+    // CameraX Camera2 extensions
+    implementation ("androidx.camera:camera-camera2:1.2.0-alpha02")
+
+    // CameraX Lifecycle library
+    implementation ("androidx.camera:camera-lifecycle:1.2.0-alpha02")
+
+    // CameraX View class
+    implementation ("androidx.camera:camera-view:1.2.0-alpha02")
+
+    // WindowManager
+    implementation ("androidx.window:window:1.1.0-alpha03")
+
+
+    // MediaPipe Library
+    implementation ("com.google.mediapipe:tasks-vision:0.10.14")
+
+    implementation("io.github.sceneview:sceneview:2.3.0")
+
 
 }

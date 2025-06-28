@@ -8,14 +8,15 @@ import com.example.mirrorme.data.repository.AuthRepositoryImpl
 import com.example.mirrorme.data.repository.ProductRepositoryImpl
 import com.example.mirrorme.data.repository.ProfileRepositoryImpl
 import com.example.mirrorme.data.session.SessionPreferences
-import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.createSupabaseClient
 import com.example.mirrorme.data.source.AuthRemoteSource
 import com.example.mirrorme.data.source.ProductRemoteSource
 import com.example.mirrorme.data.source.ProfileRemoteSource
 import com.example.mirrorme.domain.repository.AuthRepository
+import com.example.mirrorme.domain.repository.ProfileRepository
 import com.example.mirrorme.domain.usecase.GetLastScreenUseCase
 import com.example.mirrorme.domain.usecase.GetProductsUseCase
+import com.example.mirrorme.domain.usecase.GetProfileUseCase
 import com.example.mirrorme.domain.usecase.SetLastScreenUseCase
 import com.example.mirrorme.domain.usecase.SignUpUseCase
 import com.example.mirrorme.domain.usecase.SignInUseCase
@@ -38,7 +39,7 @@ object ServiceLocator {
         AuthRemoteSource(supabaseClient)
     }
 
-    private val profileRemoteSource by lazy {
+    val profileRemoteSource by lazy {
         ProfileRemoteSource(supabaseClient)
     }
 
@@ -47,7 +48,7 @@ object ServiceLocator {
         AuthRepositoryImpl(authRemoteSource)
     }
 
-    private val profileRepository by lazy {
+     val profileRepository by lazy {
         ProfileRepositoryImpl(profileRemoteSource)
     }
 
@@ -88,5 +89,9 @@ object ServiceLocator {
         sessionPreferences = SessionPreferences(context)
         setLastScreenUseCase = SetLastScreenUseCase(sessionPreferences)
         getLastScreenUseCase = GetLastScreenUseCase(sessionPreferences)
+    }
+
+    fun provideGetProfileUseCase(repository: ProfileRepository): GetProfileUseCase {
+        return GetProfileUseCase(repository)
     }
 }

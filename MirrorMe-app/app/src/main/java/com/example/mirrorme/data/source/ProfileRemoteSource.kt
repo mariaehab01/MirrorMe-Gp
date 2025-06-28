@@ -1,21 +1,12 @@
 package com.example.mirrorme.data.source
 
+import android.util.Log
+import com.example.mirrorme.domain.model.Profile
 import io.github.jan.supabase.SupabaseClient
 import io.github.jan.supabase.auth.auth
+import io.github.jan.supabase.postgrest.from
 import io.github.jan.supabase.postgrest.postgrest
 import kotlinx.serialization.Serializable
-
-@Serializable
-data class Profile(
-    val id: String, // This should be the logged-in user's UUID
-    val phone: String,
-    val height: Int,
-    val weight: Int,
-    val body_shape: String,
-    val skin_tone: String,
-    val gender: String
-)
-
 
 class ProfileRemoteSource(private val supabaseClient: SupabaseClient) {
 
@@ -54,4 +45,25 @@ class ProfileRemoteSource(private val supabaseClient: SupabaseClient) {
 
         }
     }
+    suspend fun getProfile(): Result<Profile?> {
+        val userId = supabaseClient.auth.currentUserOrNull()?.id
+            ?: return Result.failure(Exception("User not authenticated"))
+
+        return try {
+            val profile = supabaseClient
+                .from("profiles")
+                .select {
+                    filter { eq("id", userId) }
+                    single()
+                }
+                .decodeAs<Profile>()
+            Log.d("profile", "Fetched product: $profile")
+
+            Result.success(profile)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+
 }
