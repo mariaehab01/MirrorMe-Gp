@@ -1,6 +1,7 @@
 package com.example.mirrorme.di
 
 
+import GetProductByIdUseCase
 import SaveProfileUseCase
 import android.content.Context
 import com.example.mirrorme.data.repository.AuthRepositoryImpl
@@ -74,6 +75,9 @@ object ServiceLocator {
     val getProductsUseCase by lazy {
         GetProductsUseCase(productRepository)
     }
+
+    val getProductByIdUseCase = GetProductByIdUseCase(productRepository)
+
 
     // -- Session Persistence --
     private lateinit var sessionPreferences: SessionPreferences

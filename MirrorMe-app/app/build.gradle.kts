@@ -65,5 +65,7 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:3.1.1")
     implementation("io.github.jan-tennert.supabase:gotrue-kt:1.3.1")
     implementation("io.github.jan-tennert.supabase:postgrest-kt:1.3.1")
+    implementation("io.coil-kt:coil-compose:2.6.0")
+
 
 }

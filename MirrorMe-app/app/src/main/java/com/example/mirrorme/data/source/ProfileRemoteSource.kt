@@ -44,7 +44,14 @@ class ProfileRemoteSource(private val supabaseClient: SupabaseClient) {
             supabaseClient.postgrest["profiles"].insert(profile)
             Result.success(Unit)
         } catch (e: Exception) {
-            Result.failure(e)
+            val errorMessage = e.message.orEmpty().lowercase()
+
+            return if (errorMessage.contains("duplicate key") || errorMessage.contains("already exists")) {
+                Result.failure(Exception("Profile already exists for this user."))
+            } else {
+                Result.failure(e)
+            }
+
         }
     }
 }

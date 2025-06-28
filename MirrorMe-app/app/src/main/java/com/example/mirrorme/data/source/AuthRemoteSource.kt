@@ -8,14 +8,14 @@ class AuthRemoteSource(private val supabaseClient: SupabaseClient) {
 
     suspend fun signUp(emailValue: String, passwordValue: String): Result<Unit> {
         return try {
-            // Sign up
-            val signUpResult = supabaseClient.auth.signUpWith(Email) {
+            // sign up
+            supabaseClient.auth.signUpWith(Email) {
                 email = emailValue
                 password = passwordValue
             }
 
-            // Sign in (even if confirmation is required)
-            val sessionResult = supabaseClient.auth.signInWith(Email) {
+            // Sign-in immediately after sign-up (to get session and satisfy RLS later)
+            supabaseClient.auth.signInWith(Email) {
                 email = emailValue
                 password = passwordValue
             }
@@ -26,10 +26,13 @@ class AuthRemoteSource(private val supabaseClient: SupabaseClient) {
             } else {
                 Result.failure(Exception("Sign-in failed: session is null"))
             }
+
         } catch (e: Exception) {
             Result.failure(e)
+
         }
     }
+
 
     suspend fun signIn(emailValue: String, passwordValue: String): Result<Unit> {
         return try {
