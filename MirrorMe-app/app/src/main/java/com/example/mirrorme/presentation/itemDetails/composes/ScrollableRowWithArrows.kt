@@ -45,7 +45,7 @@ fun ScrollableRowWithArrows(
                 imageVector = Icons.Sharp.ArrowBackIosNew,
                 contentDescription = "Scroll Left",
                 tint = itemsBlue,
-                modifier = Modifier.size(24.dp).clickable { onScrollChange(scrollStart - 1) }
+                modifier = Modifier.size(20.dp).clickable { onScrollChange(scrollStart - 1) }
             )
         }
 
@@ -69,7 +69,7 @@ fun ScrollableRowWithArrows(
                 imageVector = Icons.AutoMirrored.Sharp.ArrowForwardIos,
                 contentDescription = "Scroll Right",
                 tint = itemsBlue,
-                modifier = Modifier.size(24.dp).clickable { onScrollChange(scrollStart + 1) }
+                modifier = Modifier.size(20.dp).clickable { onScrollChange(scrollStart + 1) }
             )
         }
     }

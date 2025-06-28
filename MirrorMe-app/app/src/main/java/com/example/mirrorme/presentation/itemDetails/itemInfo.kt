@@ -18,6 +18,7 @@ import com.example.mirrorme.presentation.itemDetails.composes.CodeAndReviews
 import com.example.mirrorme.presentation.itemDetails.composes.ColorSizeQuantitySection
 import com.example.mirrorme.presentation.itemDetails.composes.NameAndStars
 import com.example.mirrorme.presentation.itemDetails.composes.OutfitContainer
+import com.example.mirrorme.presentation.itemDetails.composes.ProductDescriptionSection
 import com.example.mirrorme.presentation.itemDetails.composes.ProductImage
 import com.example.mirrorme.presentation.itemDetails.composes.ScrollableRowWithArrows
 import com.example.mirrorme.presentation.itemDetails.composes.TopBar
@@ -113,6 +114,10 @@ fun ItemInfoScreen(productId: String, navController: NavHostController) {
                         onSizeScrollChange = { newStart -> sizeScrollStart = newStart }
                     )
                     Spacer(modifier = Modifier.height(20.dp))
+
+                    // -------- Product Description Section --------
+                    ProductDescriptionSection()
+                    Spacer(modifier = Modifier.height(12.dp))
 
                     // -------- Buttons Row --------
                     ActionButtons(
