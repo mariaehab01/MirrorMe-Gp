@@ -48,22 +48,6 @@ class SignUp : ComponentActivity() {
             MirrorMeTheme {
                 val navController = rememberNavController()
                 AppNavHost(navController)
-//                NavHost(navController = navController, startDestination = "signUp") {
-//                    composable("signUp") {
-//                        SignUpContent(navController = navController)
-//                    }
-//                    composable(
-//                        route = "bodyInfo/{gender}?email={email}&password={password}&phone={phone}",
-//                        arguments = listOf(
-//                            navArgument("gender") { defaultValue = "unknown" },
-//                            navArgument("phone") { defaultValue = "" }
-//                        )
-//                    ) { backStackEntry ->
-//                        val gender = backStackEntry.arguments?.getString("gender") ?: "unknown"
-//                        val phone = backStackEntry.arguments?.getString("phone") ?: ""
-//                        BodyInfoContent(gender, phone)
-//                    }
-//                }
             }
         }
     }
@@ -88,6 +72,7 @@ fun SignUpContent(
 
     val uiState by viewModel.uiState.collectAsState()
 
+    val context = LocalContext.current
     LaunchedEffect(uiState) {
         when (uiState) {
             is AuthUiState.Success -> {
@@ -96,7 +81,15 @@ fun SignUpContent(
                 }
             }
             is AuthUiState.Error -> {
-                showSuccessDialog = true
+                when {
+                    (uiState as AuthUiState.Error).message.contains("Email not confirmed", ignoreCase = true) -> {
+                        showSuccessDialog= true
+                    }
+                    (uiState as AuthUiState.Error).message.contains("Invalid login credential", ignoreCase = true) -> {
+                        Toast.makeText(context, "account already exist", Toast.LENGTH_LONG).show()
+                        
+                    }
+                }
             }
             else -> Unit
         }

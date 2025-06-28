@@ -1,8 +1,8 @@
 package com.example.mirrorme.presentation.navigation
 
-import android.window.SplashScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -12,6 +12,7 @@ import com.example.mirrorme.presentation.auth.BodyInfoContent
 import com.example.mirrorme.presentation.home.HomeScreen
 import com.example.mirrorme.presentation.auth.SignInContent
 import com.example.mirrorme.presentation.auth.SignUpContent
+import com.example.mirrorme.presentation.itemDetails.ItemInfoScreen
 import com.example.mirrorme.presentation.onboarding.FirstScreen
 import com.example.mirrorme.presentation.splash.SplashScreen
 
@@ -46,8 +47,21 @@ fun AppNavHost(navController: NavHostController = rememberNavController()) {
         ) { backStackEntry ->
             val gender = backStackEntry.arguments?.getString("gender") ?: "unknown"
             val phone = backStackEntry.arguments?.getString("phone") ?: ""
-            BodyInfoContent(gender, phone)
+            BodyInfoContent(gender, phone,
+                navController = navController,
+                onSaveProfileSuccess = {
+                    ServiceLocator.setLastScreenUseCase("home")
+                }
+            )
         }
         composable("home") { HomeScreen(navController) }
+        composable(
+            route = "itemInfo/{productId}",
+            arguments = listOf(navArgument("productId") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val productId = backStackEntry.arguments?.getString("productId") ?: ""
+            ItemInfoScreen(productId = productId, navController = navController)
+        }
+
     }
 }

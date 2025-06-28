@@ -36,6 +36,8 @@ class AuthViewModel : ViewModel() {
         }
     }
 
+
+
     //sign in
     fun signIn(email: String, password: String) {
         viewModelScope.launch {

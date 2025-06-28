@@ -2,6 +2,7 @@ package com.example.mirrorme.domain.repository
 
 import com.example.mirrorme.domain.model.Product
 
-interface ProductRepo {
+interface ProductRepository {
     suspend fun getAllProducts(): Result<List<Product>>
+    suspend fun getProductById(productId: String): Result<Product>
 }

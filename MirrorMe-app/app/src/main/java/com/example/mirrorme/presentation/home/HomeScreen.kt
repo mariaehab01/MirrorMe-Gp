@@ -14,7 +14,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -22,10 +21,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.mirrorme.R
 import com.example.mirrorme.presentation.home.composes.*
-import com.example.mirrorme.ui.theme.lightBlue
-import com.example.mirrorme.ui.theme.mainPink
-import com.example.mirrorme.domain.model.Product
-import com.example.mirrorme.presentation.onboarding.FirstScreen
 import com.example.mirrorme.ui.theme.off_white
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.getValue
@@ -129,7 +124,7 @@ fun HomeScreen(navController: NavHostController) {
                 items(filteredProducts) { item ->
                     Log.d("HomeScreen", "Rendering item: ${item.name} - ${item.imageUrl}")
                     ProductItem(item = item) {
-                        // TODO: navigate to product details
+                        navController.navigate("itemInfo/${item.id}")
                     }
                 }
             }
