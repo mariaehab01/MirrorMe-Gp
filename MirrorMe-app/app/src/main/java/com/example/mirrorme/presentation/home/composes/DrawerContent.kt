@@ -22,6 +22,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -135,24 +136,24 @@ fun AppDrawerContent(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .clickable { onLogoutClick() }
+                .fillMaxWidth()
+                .padding(vertical = 16.dp)
+                .background(Color.Transparent)
+                .padding(horizontal = 12.dp)
         ) {
             Icon(
                 imageVector = Icons.Filled.Logout,
                 contentDescription = "Logout",
                 tint = Color.Red,
-                modifier = Modifier.padding(end = 8.dp)
+                modifier = Modifier.size(24.dp)
             )
-            Button(
-                onClick = onLogoutClick,
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Transparent,
-                    contentColor = Color.Red
-                ),
-                elevation = ButtonDefaults.buttonElevation(0.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Log Out", fontSize = 16.sp)
-            }
+            Spacer(modifier = Modifier.width(8.dp))
+            Text(
+                text = "Log Out",
+                fontSize = 20.sp,
+                color = Color.Red,
+                fontWeight = FontWeight.Bold
+            )
         }
     }
 }

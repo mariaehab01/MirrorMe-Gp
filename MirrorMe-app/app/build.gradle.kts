@@ -41,7 +41,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -65,5 +64,11 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:3.1.1")
     implementation("io.github.jan-tennert.supabase:gotrue-kt:1.3.1")
     implementation("io.github.jan-tennert.supabase:postgrest-kt:1.3.1")
-
+    implementation("androidx.navigation:navigation-compose:2.9.0")
+    implementation("io.github.jan-tennert.supabase:postgrest-kt:1.5.3")
+    implementation("io.github.jan-tennert.supabase:supabase-kt:1.5.3")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.3")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation("io.coil-kt:coil-compose:2.4.0")
 }
