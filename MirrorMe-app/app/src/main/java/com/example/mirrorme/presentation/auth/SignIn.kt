@@ -155,9 +155,8 @@ fun SignInContent(
             Button(
                 onClick = {
                     emailError = if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) null else "Invalid email"
-                    passwordError = if (password.length >= 6) null else "Password too short"
 
-                    if (emailError == null && passwordError == null) {
+                    if (emailError == null) {
                         viewModel.signIn(email, password)
                     }
                 },

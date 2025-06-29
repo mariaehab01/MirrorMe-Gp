@@ -10,7 +10,8 @@ data class ProductDto(
     val price: Double,
     val image_url: String,
     val category: String,
-    val gender: String
+    val gender: String,
+    val object_url: String
 ) {
     fun toDomain(): Product {
         return Product(
@@ -19,7 +20,8 @@ data class ProductDto(
             price = price,
             imageUrl = image_url,
             category = category,
-            gender = gender
+            gender = gender,
+            objectUrl = object_url
         )
     }
 }
