@@ -1,0 +1,2 @@
+useful for supabase with android: https://github.com/supabase-community/supabase-kt?tab=readme-ov-file
+                                : https://supabase.com/docs/guides/getting-started/tutorials/with-kotlin#set-up-supabase-dependencies

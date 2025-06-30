@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D T-Shirt Try-On with Fit Insights</title>
+    <link rel="stylesheet" href="src/style.css">
+
+</head>
+<body>
+  <div id="ui">
+    <div id="fitMessage">Recommended size: --</div>
+
+    <input id="heightInput" type="number" placeholder="Height (cm)" value="170">
+    <input id="weightInput" type="number" placeholder="Weight (kg)" value="70">
+
+    <select id="shapeSelect">
+      <option value="Average">Average</option>
+      <option value="Slim">Slim</option>
+      <option value="Muscular">Muscular</option>
+      <option value="Curvy">Curvy</option>
+    </select>
+
+    <select id="sizeSelect">
+      <option value="S">S</option>
+      <option value="M" selected>M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+      <option value="XXL">XXL</option>
+    </select>
+
+    <select id="colorSelect">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="white" selected>White</option>
+      <option value="black">Black</option>
+    </select>
+
+    <input id="shoulderInput" type="number" placeholder="Shoulder Px" value="200">
+    <input id="imageWidthInput" type="number" placeholder="Image Width Px" value="1080">
+
+    <div id="fitInsights">Fit Insights: --</div>
+
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
