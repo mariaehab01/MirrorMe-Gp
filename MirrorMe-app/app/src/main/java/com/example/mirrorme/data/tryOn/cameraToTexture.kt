@@ -21,7 +21,10 @@ fun createAccurateCameraWithPoseAnd3D(
     context: Context,
     lifecycleOwner: LifecycleOwner,
     onPoseResult: (PoseLandmarkerHelper.ResultBundle) -> Unit,
+    setLoading: (Boolean) -> Unit,
     onModelReady: (ModelNode) -> Unit,
+    modelPath: String
+
 ): View {
     val container = FrameLayout(context)
 
@@ -51,8 +54,9 @@ fun createAccurateCameraWithPoseAnd3D(
     loadModelIntoScene(
         context = context,
         sceneView = sceneView,
-        modelPath = "models/tshirt.glb", // Change as needed
-        onModelReady = onModelReady
+        modelPath = modelPath, // Change as needed
+        onModelReady = onModelReady,
+        setLoading = setLoading
     )
 
     // Pose detection helper

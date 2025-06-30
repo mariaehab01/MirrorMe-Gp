@@ -124,7 +124,7 @@ fun HomeScreen(navController: NavHostController) {
                 items(filteredProducts) { item ->
                     Log.d("HomeScreen", "Rendering item: ${item.name} - ${item.imageUrl}")
                     ProductItem(item = item) {
-                        navController.navigate("itemInfo/${item.id}")
+                        navController.navigate("itemInfo/${item.ml_id}")
                     }
                 }
             }

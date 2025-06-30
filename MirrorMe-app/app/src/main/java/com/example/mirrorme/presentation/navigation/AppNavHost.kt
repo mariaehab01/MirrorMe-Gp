@@ -57,9 +57,9 @@ fun AppNavHost(navController: NavHostController = rememberNavController()) {
         composable("home") { HomeScreen(navController) }
         composable(
             route = "itemInfo/{productId}",
-            arguments = listOf(navArgument("productId") { type = NavType.StringType })
+            arguments = listOf(navArgument("productId") { type = NavType.IntType })
         ) { backStackEntry ->
-            val productId = backStackEntry.arguments?.getString("productId") ?: ""
+            val productId = backStackEntry.arguments?.getInt("productId") ?: 1
             ItemInfoScreen(productId = productId, navController = navController)
         }
 

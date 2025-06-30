@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
@@ -13,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import com.example.mirrorme.data.tryOn.TshirtSize
 import com.example.mirrorme.data.tryOn.applyColorToModel
 import com.example.mirrorme.data.tryOn.colorList
@@ -39,6 +41,7 @@ class CameraTryOnActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val modelUrl = intent.getStringExtra("MODEL_URL")
 
         requestPermissionLauncher =
             registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
@@ -66,7 +69,7 @@ class CameraTryOnActivity : ComponentActivity() {
         )
     }
 
-    private fun TryOnUI(profile: Profile) {
+    private fun TryOnUI(profile: Profile, modelUrl: String) {
         setContent {
             val sizeList = womenTshirtSizes.values.toList()
             var selectedSizeIndex by remember { mutableStateOf(0) }
@@ -84,7 +87,7 @@ class CameraTryOnActivity : ComponentActivity() {
 
             Box(modifier = Modifier.fillMaxSize()) {
                 ARWithCameraPreview(
-                    selectedSize = selectedSize, // ✅ pass state
+                    selectedSize = selectedSize,
                     selectedColorIndex = selectedColorIndex,
                     onRecommendedSizeChange = { newText ->
                         recommendedSizeText = newText
@@ -97,7 +100,8 @@ class CameraTryOnActivity : ComponentActivity() {
                         chestPosition = chestPos
                         waistPosition = waistPos
                     },
-                    profile = profile
+                    profile = profile,
+                    modelUrl = modelUrl
                 )
 
                 SizeRecommendationUI(recommendedSizeText)
@@ -156,47 +160,68 @@ class CameraTryOnActivity : ComponentActivity() {
         onRecommendedSizeChange: (String) -> Unit,
         onFitInsightsChange: (String, String) -> Unit,
         onLandmarkPositionsChange: (Offset?, Offset?) -> Unit,
-        profile: Profile
+        profile: Profile,
+        modelUrl: String
     ) {
-        AndroidView(
-            factory = { context ->
-                createAccurateCameraWithPoseAnd3D(
-                    context = context,
-                    lifecycleOwner = this,
-                    onPoseResult = { resultBundle ->
-                        runOnUiThread {
-                            modelNodeRef?.let {
-                                val result =
-                                    resultBundle.results.firstOrNull() ?: return@runOnUiThread
-                                handlePoseResult(
-                                    result,
-                                    it,
-                                    onRecommendedSizeChange,
-                                    onFitInsightsChange,
-                                    onLandmarkPositionsChange,
-                                    selectedSize.value,  // ✅ always latest size
-                                    updateShoulderDistancePx = { shoulderDistancePx ->
-                                        lastShoulderDistancePx = shoulderDistancePx
-                                    },
-                                    profile
-                                )
+        var isModelLoading by remember { mutableStateOf(false) }
+        val lifecycleOwner = LocalLifecycleOwner.current
+
+        Box(modifier = Modifier.fillMaxSize()) {
+            AndroidView(
+                factory = { context ->
+                    createAccurateCameraWithPoseAnd3D(
+                        context = context,
+                        lifecycleOwner = lifecycleOwner,
+                        setLoading = { isModelLoading = it },   // ✅ Pass Compose loading state
+                        onPoseResult = { resultBundle ->
+                            runOnUiThread {
+                                modelNodeRef?.let {
+                                    val result =
+                                        resultBundle.results.firstOrNull() ?: return@runOnUiThread
+                                    handlePoseResult(
+                                        result,
+                                        it,
+                                        onRecommendedSizeChange,
+                                        onFitInsightsChange,
+                                        onLandmarkPositionsChange,
+                                        selectedSize.value,
+                                        updateShoulderDistancePx = { shoulderDistancePx ->
+                                            lastShoulderDistancePx = shoulderDistancePx
+                                        },
+                                        profile
+                                    )
+                                }
                             }
-                        }
-                    },
-                    onModelReady = { modelNode ->
-                        modelNodeRef = modelNode
-                        scaleModelToSize(modelNode, selectedSize.value)
-                        applyColorToModel(modelNode, colorList[selectedColorIndex])
-                    }
-                )
+                        },
+                        onModelReady = { modelNode ->
+                            modelNodeRef = modelNode
+                            scaleModelToSize(modelNode, selectedSize.value)
+                            applyColorToModel(modelNode, colorList[selectedColorIndex])
+                        },
+                        modelPath = modelUrl
+                    )
+                }
+            )
+
+            if (isModelLoading) {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(androidx.compose.ui.graphics.Color.Black.copy(alpha = 0.3f)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    androidx.compose.material3.CircularProgressIndicator()
+                }
             }
-        )
+        }
     }
+
     @Composable
     fun ProfileObserverScreen() {
         val profile = viewModel.profileUiState
         val isLoading = viewModel.isLoading
         val errorMessage = viewModel.errorMessage
+        val modelUrl = intent.getStringExtra("MODEL_URL") ?: ""
 
         when {
             isLoading -> {
@@ -206,7 +231,7 @@ class CameraTryOnActivity : ComponentActivity() {
                 Text("Error: $errorMessage")
             }
             profile != null -> {
-                TryOnUI(profile)
+                TryOnUI(profile, modelUrl)
             }
         }
     }

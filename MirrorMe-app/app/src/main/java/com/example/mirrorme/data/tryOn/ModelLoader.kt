@@ -11,10 +11,12 @@ import io.github.sceneview.node.ModelNode
 fun loadModelIntoScene(
     context: Context,
     sceneView: SceneView,
-    modelPath: String = "models/pants.glb",
+    modelPath: String ,
+    setLoading: (Boolean) -> Unit,   // 👈 Added for Compose Circular Indicator
     onModelReady: ((ModelNode) -> Unit)? = null
 ) {
     val modelLoader = ModelLoader(sceneView.engine, context)
+    setLoading(true)  // 👈 Show circular progress before loading starts
 
     modelLoader.loadModelInstanceAsync(modelPath) { modelInstance: ModelInstance? ->
         modelInstance?.let {
@@ -31,6 +33,7 @@ fun loadModelIntoScene(
 
             onModelReady?.invoke(modelNode) // 👈 callback to manipulate or store the node
             Log.d("ModelLoader", "Model loaded and added to scene!")
+            setLoading(false)  // 👈 Hide progress when loading finishes
 
         }
     }

@@ -92,5 +92,14 @@ dependencies {
 
     implementation("io.github.sceneview:sceneview:2.3.0")
 
+    // models dependencies
+    // Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+
+    // Gson Converter (to parse JSON into your data models)
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // (Optional but recommended for logging network calls)
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.1")
 
 }
