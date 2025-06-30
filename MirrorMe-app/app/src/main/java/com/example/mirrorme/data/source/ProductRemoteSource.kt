@@ -21,13 +21,13 @@ class ProductRemoteSource(private val client: SupabaseClient) {
         }
     }
 
-    suspend fun getProductById(productId: String): Result<Product> {
+    suspend fun getProductById(productId: Int): Result<Product> {
         return try {
             val result = client
                 .from("products")
                 .select {
                     filter {
-                        eq("id", productId)
+                        eq("ml_id", productId)
                     }
                     single()
                 }

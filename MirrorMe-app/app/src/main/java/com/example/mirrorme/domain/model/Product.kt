@@ -7,6 +7,7 @@ data class Product(
     val imageUrl: String,
     val category: String,
     val gender: String,
-    val objectUrl: String
+    val objectUrl: String,
+    val ml_id: Int
 )
 

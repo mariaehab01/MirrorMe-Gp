@@ -9,7 +9,7 @@ class ProductRepositoryImpl(
 ) : ProductRepository {
     override suspend fun getAllProducts(): Result<List<Product>> =
         remote.getAllProducts()
-    override suspend fun getProductById(productId: String)=
+    override suspend fun getProductById(productId: Int)=
          remote.getProductById(productId)
 
 }
