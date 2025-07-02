@@ -10,13 +10,32 @@ import kotlin.collections.map
 class ProductRemoteSource(private val client: SupabaseClient) {
     suspend fun getAllProducts(): Result<List<Product>> {
         return try {
-            val result = client
-                .from("products")
-                .select()
-                .decodeList<ProductDto>()
-                .map { it.toDomain() }
-            Result.success(result)
+            val pageSize = 1000
+            var from = 0
+            var to = pageSize - 1
+            val allProducts = mutableListOf<Product>()
+
+            while (true) {
+                val result = client
+                    .from("products")
+                    .select {
+                        range(from.toLong(), to.toLong())
+                    }
+                    .decodeList<ProductDto>()
+                    .map { it.toDomain() }
+
+                if (result.isEmpty()) break
+
+                allProducts.addAll(result)
+                Log.d("ProductRemoteSource", "Fetched ${result.size} products from $from to $to")
+
+                from += pageSize
+                to += pageSize
+            }
+
+            Result.success(allProducts)
         } catch (e: Exception) {
+            Log.e("ProductRemoteSource", "Failed to fetch products: ${e.message}", e)
             Result.failure(e)
         }
     }

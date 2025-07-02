@@ -155,8 +155,10 @@ fun SignInContent(
             Button(
                 onClick = {
                     emailError = if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) null else "Invalid email"
+                    //if password is blank
+                    passwordError = if (password.isNotBlank()) null else "Please enter your password"
 
-                    if (emailError == null) {
+                    if (emailError == null && passwordError == null) {
                         viewModel.signIn(email, password)
                     }
                 },

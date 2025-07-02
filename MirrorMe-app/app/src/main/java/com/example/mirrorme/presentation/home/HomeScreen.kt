@@ -56,7 +56,7 @@ fun HomeScreen(navController: NavHostController) {
     }
 
     val filteredProducts = products.filter { product ->
-        val matchesSearch = searchQuery.isBlank() || product.name.contains(searchQuery, ignoreCase = true)
+        val matchesSearch = searchQuery.isBlank() || product.name.lowercase().contains(searchQuery.lowercase())
         val matchesCategory = selectedCategory == null || product.category.equals(selectedCategory, ignoreCase = true) || product.category.equals("other", ignoreCase = true)
         val matchesGender = selectedGender == null || product.gender.equals(selectedGender, ignoreCase = true) || product.gender.equals("unisex", ignoreCase = true)
         matchesSearch && matchesCategory && matchesGender
