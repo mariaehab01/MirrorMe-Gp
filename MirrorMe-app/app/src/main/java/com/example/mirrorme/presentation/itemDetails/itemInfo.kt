@@ -86,7 +86,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController) {
 
                 ) {
                     // Top Bar
-                    TopBar(navController)
+                    TopBar(navController, "Item Info")
 
                     // Product Image
                     ProductImage(product.imageUrl)
@@ -101,7 +101,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController) {
                     )
 
                     // Product Code + Reviews
-                    CodeAndReviews(product)
+                    CodeAndReviews(product, navController)
                     Spacer(modifier = Modifier.height(4.dp))
 
                     // Price

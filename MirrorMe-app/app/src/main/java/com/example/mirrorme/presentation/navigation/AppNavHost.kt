@@ -14,6 +14,7 @@ import com.example.mirrorme.presentation.auth.SignInContent
 import com.example.mirrorme.presentation.auth.SignUpContent
 import com.example.mirrorme.presentation.itemDetails.ItemInfoScreen
 import com.example.mirrorme.presentation.onboarding.FirstScreen
+import com.example.mirrorme.presentation.ratingsAndReviews.RatingsAndReviewsScreen
 import com.example.mirrorme.presentation.splash.SplashScreen
 
 @Composable
@@ -61,6 +62,9 @@ fun AppNavHost(navController: NavHostController = rememberNavController()) {
         ) { backStackEntry ->
             val productId = backStackEntry.arguments?.getInt("productId") ?: 1
             ItemInfoScreen(productId = productId, navController = navController)
+        }
+        composable("ratingsAndReviews") {
+            RatingsAndReviewsScreen(navController)
         }
 
     }

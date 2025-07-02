@@ -29,10 +29,10 @@ fun NameAndStars(product: Product, rating: Int, onRatingChange: (Int) -> Unit) {
             Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                 for (i in 1..5) {
                     Icon(
-                        imageVector = if (i <= rating) Icons.Filled.Star else Icons.Outlined.Star,
+                        imageVector = if (i <= 4) Icons.Filled.Star else Icons.Outlined.Star,
                         contentDescription = "Star $i",
-                        tint = if (i <= rating) starsPink else Color.Black.copy(alpha = 0.3f),
-                        modifier = Modifier.size(20.dp).clickable { onRatingChange(i) }
+                        tint = if (i <= 4) starsPink else Color.Black.copy(alpha = 0.3f),
+                        modifier = Modifier.size(20.dp)
                     )
                 }
             }

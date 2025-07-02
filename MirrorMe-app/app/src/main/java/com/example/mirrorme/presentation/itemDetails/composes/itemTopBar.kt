@@ -20,7 +20,7 @@ import com.example.mirrorme.ui.theme.mainBlue
 import com.example.mirrorme.ui.theme.mainPink
 
 @Composable
-fun TopBar(navController: NavHostController) {
+fun TopBar(navController: NavHostController, title: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -31,7 +31,7 @@ fun TopBar(navController: NavHostController) {
             Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = mainPink)
         }
         Spacer(modifier = Modifier.weight(0.7f))
-        Text("Item Info", fontSize = 22.sp, fontWeight = FontWeight.Bold, color = mainBlue)
+        Text(title, fontSize = 22.sp, fontWeight = FontWeight.Bold, color = mainBlue)
         Spacer(modifier = Modifier.weight(1f))
     }
 }

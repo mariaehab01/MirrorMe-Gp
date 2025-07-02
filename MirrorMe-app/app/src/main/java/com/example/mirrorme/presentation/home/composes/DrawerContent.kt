@@ -73,7 +73,7 @@ fun AppDrawerContent(
             }
         }
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(20.dp))
 
         //Male Section
         SectionHeader(icon = Icons.Outlined.Man, label = "Men")
@@ -92,6 +92,8 @@ fun AppDrawerContent(
 
         //Logout Button
         LogoutItem(onLogoutClick = onLogoutClick)
+
+        Spacer(modifier = Modifier.height(20.dp))
     }
 }
 
