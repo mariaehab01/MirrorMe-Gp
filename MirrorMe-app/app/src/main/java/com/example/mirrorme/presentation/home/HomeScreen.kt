@@ -39,9 +39,6 @@ fun HomeScreen(navController: NavHostController) {
 
     var searchQuery by remember { mutableStateOf("") }
 
-//    val filteredProducts = products.filter {
-//        it.name.contains(searchQuery, ignoreCase = true)
-//    }
 
     var selectedCategory by remember { mutableStateOf<String?>(null) }
     var selectedGender by remember { mutableStateOf<String?>(null) }
@@ -55,10 +52,45 @@ fun HomeScreen(navController: NavHostController) {
         Log.d("HomeScreen", "Products received: ${products.size}")
     }
 
+    val femaleCategoryMap = mapOf(
+        "tops" to listOf("top", "blouse", "hoodie", "t-shirt", "polo", "longsleeve"),
+        "pants" to listOf("pants"),
+        "skirts" to listOf("skirt"),
+        "dresses" to listOf("dress"),
+        "jackets" to listOf("blazer", "outwear"),
+        "shoes" to listOf("shoes")
+    )
+
+    val maleCategoryMap = mapOf(
+        "t-shirts" to listOf("hoodie", "t-shirt", "polo", "longsleeve"),
+        "jackets" to listOf("blazer", "outwear"),
+        "pants" to listOf("pants"),
+        "shoes" to listOf("shoes")
+    )
+
+    val sharedCategories = setOf("tops", "jackets", "pants", "shoes")
+
+    val selectedCategoryValue = selectedCategory
+    val selectedGroup = selectedCategoryValue?.lowercase()
+    val ignoreGender = selectedGroup != null && sharedCategories.contains(selectedGroup)
+
+    val categoryList: List<String>? = when {
+        ignoreGender -> {
+            val fromFemale = femaleCategoryMap[selectedGroup] ?: emptyList()
+            val fromMale = maleCategoryMap[selectedGroup] ?: emptyList()
+            (fromFemale + fromMale).distinct()
+        }
+        selectedGender.equals("female", ignoreCase = true) -> femaleCategoryMap[selectedGroup]
+        selectedGender.equals("male", ignoreCase = true) -> maleCategoryMap[selectedGroup]
+        else -> null
+    }
+
+
     val filteredProducts = products.filter { product ->
         val matchesSearch = searchQuery.isBlank() || product.name.lowercase().contains(searchQuery.lowercase())
-        val matchesCategory = selectedCategory == null || product.category.equals(selectedCategory, ignoreCase = true) || product.category.equals("other", ignoreCase = true)
-        val matchesGender = selectedGender == null || product.gender.equals(selectedGender, ignoreCase = true) || product.gender.equals("unisex", ignoreCase = true)
+        val matchesCategory = selectedCategory == null || categoryList?.contains(product.category.lowercase()) == true
+        val matchesGender = ignoreGender || selectedGender == null || product.gender.equals(selectedGender, ignoreCase = true)
+
         matchesSearch && matchesCategory && matchesGender
     }
 
@@ -108,7 +140,7 @@ fun HomeScreen(navController: NavHostController) {
                     selectedCategory = null
                     selectedGender = null
                     searchQuery = ""
-                    scope.launch { drawerState.close() } // ✅ closes drawer if opened
+                    scope.launch { drawerState.close() }
                 }
             )
             Spacer(modifier = Modifier.height(16.dp))
