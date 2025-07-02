@@ -175,7 +175,7 @@ fun LogoutItem(onLogoutClick: () -> Unit) {
 
 fun getCategoryIcon(category: String): Int {
     return when (category.lowercase()) {
-        "tops", "top", "t-shirt", "polo", "longsleeve" -> R.drawable.tops
+        "tops", "top", "t-shirt", "t-shirts", "polo", "longsleeve", "hoodie" -> R.drawable.tops
         "pants" -> R.drawable.pants
         "skirts", "skirt" -> R.drawable.skirts
         "dresses", "dress" -> R.drawable.dresses
