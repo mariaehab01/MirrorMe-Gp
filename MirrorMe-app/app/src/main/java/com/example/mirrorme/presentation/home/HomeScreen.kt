@@ -53,8 +53,8 @@ fun HomeScreen(navController: NavHostController) {
     }
 
     val femaleCategoryMap = mapOf(
-        "tops" to listOf("top", "blouse", "hoodie", "t-shirt", "polo", "longsleeve"),
-        "pants" to listOf("pants"),
+        "tops" to listOf("top", "blouse", "hoodie", "t-shirt", "polo", "longsleeve", "undershirt"),
+        "pants" to listOf("pants", "shorts"),
         "skirts" to listOf("skirt"),
         "dresses" to listOf("dress"),
         "jackets" to listOf("blazer", "outwear"),
@@ -62,13 +62,13 @@ fun HomeScreen(navController: NavHostController) {
     )
 
     val maleCategoryMap = mapOf(
-        "t-shirts" to listOf("hoodie", "t-shirt", "polo", "longsleeve"),
+        "t-shirts" to listOf("hoodie", "t-shirt", "polo", "longsleeve", "undershirt"),
         "jackets" to listOf("blazer", "outwear"),
-        "pants" to listOf("pants"),
+        "pants" to listOf("pants", "shorts"),
         "shoes" to listOf("shoes")
     )
 
-    val sharedCategories = setOf("tops", "jackets", "pants", "shoes")
+    val sharedCategories = setOf("t-shirts", "jackets", "pants", "shoes")
 
     val selectedCategoryValue = selectedCategory
     val selectedGroup = selectedCategoryValue?.lowercase()

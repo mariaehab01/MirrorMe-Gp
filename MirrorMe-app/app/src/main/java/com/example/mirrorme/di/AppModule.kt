@@ -1,7 +1,6 @@
 package com.example.mirrorme.di
 
 import GetProductByIdUseCase
-import SaveProfileUseCase
 import android.content.Context
 import com.example.mirrorme.data.repository.AuthRepositoryImpl
 import com.example.mirrorme.data.repository.ProductRepositoryImpl
@@ -23,6 +22,7 @@ import com.example.mirrorme.domain.usecase.GetLastScreenUseCase
 import com.example.mirrorme.domain.usecase.GetProductsUseCase
 import com.example.mirrorme.domain.usecase.GetProfileUseCase
 import com.example.mirrorme.domain.usecase.GetSimilarItemsUseCase
+import com.example.mirrorme.domain.usecase.SaveProfileUseCase
 import com.example.mirrorme.domain.usecase.SetLastScreenUseCase
 import com.example.mirrorme.domain.usecase.SignUpUseCase
 import com.example.mirrorme.domain.usecase.SignInUseCase

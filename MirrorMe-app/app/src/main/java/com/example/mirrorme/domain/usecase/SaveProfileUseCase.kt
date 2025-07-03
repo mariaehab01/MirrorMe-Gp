@@ -1,3 +1,5 @@
+package com.example.mirrorme.domain.usecase
+
 import com.example.mirrorme.domain.repository.ProfileRepository
 
 class SaveProfileUseCase(private val profileRepository: ProfileRepository) {
