@@ -17,13 +17,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.mirrorme.R
 import com.example.mirrorme.ui.theme.lightBlue
 import com.example.mirrorme.ui.theme.mainPink
 import com.example.mirrorme.ui.theme.mainBlue
 
 @Composable
-fun TopBarSection(onMenuClick: () -> Unit) {
+fun TopBarSection(onMenuClick: () -> Unit, navController: NavHostController) {
     val bottomRoundedShape = RoundedCornerShape(
         topStart = 0.dp,
         topEnd = 0.dp,
@@ -51,7 +53,10 @@ fun TopBarSection(onMenuClick: () -> Unit) {
 
         Text("MirrorMe", fontSize = 22.sp, color = mainBlue)
 
-        IconButton(onClick = {}) {
+        IconButton(onClick = {
+            //navigate to cart screen
+            navController.navigate("cart")
+        }) {
                 Icon(painterResource(id = R.drawable.cart),
                     contentDescription = "Cart",
                     tint = Color.Unspecified,

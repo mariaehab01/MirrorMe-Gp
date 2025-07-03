@@ -3,6 +3,7 @@ package com.example.mirrorme.presentation.itemDetails
 import itemViewModel
 import android.content.Intent
 import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
@@ -15,9 +16,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.mirrorme.data.tryOn.colorList
+import com.example.mirrorme.domain.model.CartItem
+//import com.example.mirrorme.domain.model.CartItem
 import com.example.mirrorme.presentation.cameraTryOn.CameraTryOnActivity
+import com.example.mirrorme.presentation.cart.CartViewModel
+//import com.example.mirrorme.presentation.cart.CartViewModel
 import com.example.mirrorme.presentation.itemDetails.composes.ActionButtons
 import com.example.mirrorme.presentation.itemDetails.composes.CodeAndReviews
 import com.example.mirrorme.presentation.itemDetails.composes.ColorSizeQuantitySection
@@ -33,7 +39,7 @@ val colors = colorList.map { ComposeColor(it) }
 
 
 @Composable
-fun ItemInfoScreen(productId: Int, navController: NavHostController) {
+fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewModel: CartViewModel) {
     Log.d("ItemInfoScreen", "Calling loadSimilarItems with $productId")
 
     val context = LocalContext.current
@@ -41,6 +47,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController) {
     val product = viewModel.productUiState
     val isLoading = viewModel.isLoading
     val errorMessage = viewModel.errorMessage
+    val maxQuantity = 10
 
     var rating by rememberSaveable { mutableStateOf(0) }
     var selectedColorIndex by remember { mutableStateOf(0) }
@@ -105,7 +112,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController) {
                     Spacer(modifier = Modifier.height(4.dp))
 
                     // Price
-                    Text("${product.price} LE",
+                    Text("${"%.2f".format(product.price)} LE",
                         fontSize = 20.sp,
                         fontWeight = FontWeight.W700,
                         color = itemsBlue, modifier =
@@ -124,7 +131,11 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController) {
                         quantity = quantity,
                         onColorSelect = { index -> selectedColorIndex = index },
                         onSizeSelect = { index -> selectedSizeIndex = index },
-                        onQuantityChange = { newQuantity -> quantity = newQuantity },
+                        onQuantityChange = { newQuantity ->
+                            if (newQuantity in 1..maxQuantity) {
+                                quantity = newQuantity
+                            }
+                        },
                         colorScrollStart = colorScrollStart,
                         sizeScrollStart = sizeScrollStart,
                         onColorScrollChange = { newStart -> colorScrollStart = newStart },
@@ -142,7 +153,34 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController) {
                             intent.putExtra("MODEL_URL", product.objectUrl)
                             context.startActivity(intent)
                                   },
-                        onAddToBag = { /* Handle Buy Now */ },
+                        onAddToBag = {
+                            val selectedProduct = product
+
+                            val existingItem = cartViewModel.cartItems.value.find {
+                                it.productId == selectedProduct.ml_id &&
+                                        it.color == colors[selectedColorIndex].toString() &&
+                                        it.size == sizes[selectedSizeIndex]
+                            }
+
+                            val currentQuantityInCart = existingItem?.quantity ?: 0
+                            val totalRequested = currentQuantityInCart + quantity
+
+                            if (totalRequested > maxQuantity) {
+                                Toast.makeText(context, "Maximum quantity reached", Toast.LENGTH_SHORT).show()
+                            } else {
+                                val cartItem = CartItem(
+                                    productId = selectedProduct.ml_id,
+                                    name = selectedProduct.name,
+                                    imageRes = selectedProduct.imageUrl,
+                                    color = colors[selectedColorIndex].toString(),
+                                    size = sizes[selectedSizeIndex],
+                                    price = selectedProduct.price,
+                                    quantity = quantity
+                                )
+                                cartViewModel.addItem(cartItem)
+                                Toast.makeText(context, "${selectedProduct.name} added to bag", Toast.LENGTH_SHORT).show()
+                            }
+                        },
                         onGenerateOutfit = {
                             viewModel.loadOutfitItems(finedProductId)
                             showOutfitContainer = true }
@@ -202,3 +240,5 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController) {
         }
     }
 }
+
+

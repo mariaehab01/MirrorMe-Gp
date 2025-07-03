@@ -129,7 +129,7 @@ fun HomeScreen(navController: NavHostController) {
         ) {
             TopBarSection(onMenuClick = {
                 scope.launch { drawerState.open() }
-            })
+            }, navController)
             TitleSection(category = "Home")
             BannerSection(bannerRes = R.drawable.home_banner)
             SearchBarSection(

@@ -34,7 +34,7 @@ import com.example.mirrorme.ui.theme.off_white
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-
+import com.example.mirrorme.domain.model.ReviewData
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -104,8 +104,6 @@ fun RatingsAndReviewsScreen(
         }
     }
 }
-
-data class ReviewData(val name: String, val time: String, val stars: Int, val comment: String)
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
