@@ -21,7 +21,6 @@ import com.example.mirrorme.di.ServiceLocator
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Force light mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         ServiceLocator.init(applicationContext)
         super.onCreate(savedInstanceState)

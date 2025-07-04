@@ -1,6 +1,6 @@
 package com.example.mirrorme.di
 
-import GetProductByIdUseCase
+import com.example.mirrorme.domain.usecase.GetProductByIdUseCase
 import android.content.Context
 import com.example.mirrorme.data.repository.AuthRepositoryImpl
 import com.example.mirrorme.data.repository.ProductRepositoryImpl
@@ -59,7 +59,7 @@ object ServiceLocator {
 
         Retrofit.Builder()
             .baseUrl("https://outfit-model-production.up.railway.app/")
-            .client(client)  // <<<<< Add client with logging
+            .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

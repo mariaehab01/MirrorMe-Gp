@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class Profile(
-    val id: String, // This should be the logged-in user's UUID
+    val id: String,
     val phone: String,
     val height: Int,
     val weight: Int,

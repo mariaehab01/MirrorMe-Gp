@@ -112,26 +112,3 @@ fun BodyInfoScroller(
     }
 }
 
-//@Preview(showBackground = true)
-//@Composable
-//fun BodyInfoScrollerPreview() {
-//    val items = listOf(
-//        BodyInfoItem.ImageItem(painterResource(R.drawable.m_body1), 80.dp, 120.dp),
-//        BodyInfoItem.ColorItem(Color(0xFFF8D0C6)),
-//        BodyInfoItem.ColorItem(Color(0xFFFFE0B2)),
-//        BodyInfoItem.ColorItem(Color(0xFFF8BF8D))
-//    )
-//    val nameMap = mapOf(
-//        items[0] to "Athletic",
-//        items[1] to "Fair1",
-//        items[2] to "Fair2",
-//        items[3] to "Light"
-//    )
-//
-//    BodyInfoScroller(
-//        title = "Body Shapes",
-//        items = items,
-//        nameMap = nameMap,
-//        onItemSelected = { index, name -> println("Selected: $index, $name") }
-//    )
-//}

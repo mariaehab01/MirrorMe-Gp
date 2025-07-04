@@ -27,17 +27,7 @@ fun AppNavHost(navController: NavHostController = rememberNavController()) {
     NavHost(navController = navController, startDestination = "splash") {
         composable("splash") {
             SplashScreen(navController = navController)
-//            val lastScreen = ServiceLocator.getLastScreenUseCase()
-//            val targetScreen = when (lastScreen) {
-//                "firstScreen" -> "firstScreen"
-//                "signUp" -> "signUp"
-//                "home" -> "home"
-//                else -> "firstScreen"
-//            }
-//            navController.navigate(targetScreen) {
-//                popUpTo("splash") { inclusive = true }
-//            }
-//            SplashScreen(navController)
+
         }
         composable("firstScreen") { FirstScreen(navController) }
         composable("signIn") { SignInContent(navController) }

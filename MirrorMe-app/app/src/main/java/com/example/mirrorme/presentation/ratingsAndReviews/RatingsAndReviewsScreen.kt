@@ -63,11 +63,10 @@ fun RatingsAndReviewsScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Scrollable reviews only
             val scrollState = rememberScrollState()
             Column(
                 modifier = Modifier
-                    .weight(1f) // take remaining height between top & button
+                    .weight(1f)
                     .verticalScroll(scrollState)
             ) {
                 reviews.forEach { review ->
@@ -82,7 +81,6 @@ fun RatingsAndReviewsScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // Fixed "Write Review" button
             Button(
                 onClick = { showBottomSheet.value = true },
                 colors = ButtonDefaults.buttonColors(containerColor = mainPink),

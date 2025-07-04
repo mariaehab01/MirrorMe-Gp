@@ -61,7 +61,7 @@ fun fieldsContainer(
 
             Spacer(modifier = Modifier.height(26.dp))
 
-            content() //Insert the user-defined content
+            content()
         }
     }
 }

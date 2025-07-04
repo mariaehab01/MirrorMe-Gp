@@ -46,7 +46,7 @@ class CartViewModel : ViewModel() {
         _cartItems.value = _cartItems.value.flatMap {
             when {
                 it == item && it.quantity > 1 -> listOf(it.copy(quantity = it.quantity - 1))
-                it == item && it.quantity == 1 -> emptyList() // remove the item
+                it == item && it.quantity == 1 -> emptyList()
                 else -> listOf(it)
             }
         }

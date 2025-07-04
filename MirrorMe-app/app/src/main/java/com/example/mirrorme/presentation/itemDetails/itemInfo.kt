@@ -20,10 +20,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.mirrorme.data.tryOn.colorList
 import com.example.mirrorme.domain.model.CartItem
-//import com.example.mirrorme.domain.model.CartItem
 import com.example.mirrorme.presentation.cameraTryOn.CameraTryOnActivity
 import com.example.mirrorme.presentation.cart.CartViewModel
-//import com.example.mirrorme.presentation.cart.CartViewModel
 import com.example.mirrorme.presentation.itemDetails.composes.ActionButtons
 import com.example.mirrorme.presentation.itemDetails.composes.CodeAndReviews
 import com.example.mirrorme.presentation.itemDetails.composes.ColorSizeQuantitySection
@@ -127,7 +125,6 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
 
                     Spacer(modifier = Modifier.height(12.dp))
 
-                    // -------- Color + Size + Available + Quantity --------
                     ColorSizeQuantitySection(
                         colors = colors,
                         sizes = sizes,
@@ -148,11 +145,9 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
                     )
                     Spacer(modifier = Modifier.height(20.dp))
 
-                    // -------- Product Description Section --------
                     ProductDescriptionSection()
                     Spacer(modifier = Modifier.height(12.dp))
 
-                    // -------- Buttons Row --------
                     ActionButtons(
                         onTryOn = {val intent = Intent(context, CameraTryOnActivity::class.java)
                             intent.putExtra("MODEL_URL", product.objectUrl)
@@ -193,7 +188,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    // -------- Similar Items Scrollable --------
+                    //Similar Items Scrollable
                     ScrollableRowWithArrows(
                         title = "Similarities",
                         products = viewModel.similarProducts,
@@ -207,7 +202,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-//                     -------- Suggestions Scrollable --------
+                    //suggestions Scrollable
                     ScrollableRowWithArrows(
                         title = "Suggestions",
                         products = viewModel.compatibleProducts,
@@ -220,7 +215,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
 
                     Spacer(modifier = Modifier.height(16.dp))
 
-                    // -------- Outfit Container --------
+                    // outfit Container
                     if (showOutfitContainer) {
                         LaunchedEffect(showOutfitContainer) {
                             scrollState.animateScrollTo(scrollState.maxValue)
@@ -236,12 +231,11 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
                             boxColor = Color.Gray,
                             emptyMessage = "No generated outfit found",
                             onItemClick = { selectedProduct ->
-                                // Optional: Handle outfit item click
                             }
                         )
                     }
 
-                    Spacer(modifier = Modifier.height(40.dp))  // Bottom space
+                    Spacer(modifier = Modifier.height(40.dp))
                 }
             }
         }

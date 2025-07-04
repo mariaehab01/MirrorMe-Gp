@@ -25,11 +25,11 @@ fun ColorSelector(
 ) {
     val itemSize: Dp = 30.dp
     val spacing: Dp = 16.dp
-    val totalWidth = (itemSize * 6) + (spacing * 4)  // Width for exactly 5 items + 4 spacings
+    val totalWidth = (itemSize * 6) + (spacing * 4)
 
     Box(
         modifier = Modifier
-            .padding(start = 30.dp, top = 8.dp, bottom = 8.dp) // Keep your original paddings
+            .padding(start = 30.dp, top = 8.dp, bottom = 8.dp)
             .width(totalWidth)
     ) {
         LazyRow(

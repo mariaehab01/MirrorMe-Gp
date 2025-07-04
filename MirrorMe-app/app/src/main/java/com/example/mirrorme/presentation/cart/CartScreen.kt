@@ -45,10 +45,8 @@ import androidx.compose.ui.text.input.ImeAction
 @Composable
 fun CartScreen(navController: NavHostController, cartViewModel: CartViewModel) {
 
-//    val viewModel: CartViewModel = viewModel()
-
-    val focusManager = LocalFocusManager.current // 👈 Fix added here
-    var promoCode by remember { mutableStateOf("") } // 👈 Needed to store user input
+    val focusManager = LocalFocusManager.current
+    var promoCode by remember { mutableStateOf("") }
     val cartItems by cartViewModel.cartItems.collectAsState()
     val totalPrice by cartViewModel.totalPrice.collectAsState()
 
@@ -64,7 +62,6 @@ fun CartScreen(navController: NavHostController, cartViewModel: CartViewModel) {
         Spacer(modifier = Modifier.height(8.dp))
 
         if (cartItems.isEmpty()) {
-            // Show "Cart is empty" message
             Box(
                 modifier = Modifier
                     .fillMaxSize(),
@@ -114,8 +111,7 @@ fun CartScreen(navController: NavHostController, cartViewModel: CartViewModel) {
                 keyboardOptions = KeyboardOptions.Default.copy(imeAction = ImeAction.Done),
                 keyboardActions = KeyboardActions(
                     onDone = {
-                        // ✅ You can validate or apply promo here
-                        focusManager.clearFocus() // ✅ Hide keyboard
+                        focusManager.clearFocus()
                     }
                 )
             )

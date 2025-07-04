@@ -27,7 +27,7 @@ fun AppDrawerContent(
     onLogoutClick: () -> Unit
 ) {
     val femaleGroups = listOf(
-        "Tops" to listOf("top", "blouse", "hoodie", "t-shirt", "polo", "longsleeve"),
+        "Tops" to listOf("top", "blouse", "hoodie", "t-shirt", "polo", "undershirt"),
         "Pants" to listOf("pants"),
         "Skirts" to listOf("skirt"),
         "Dresses" to listOf("dress"),

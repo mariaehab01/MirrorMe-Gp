@@ -39,7 +39,7 @@ fun RoundedTextField(
     onValueChange: (String) -> Unit,
     placeholder: String,
     icon: @Composable (() -> Unit)? = null,
-    errorMessage: String? = null  // null = no error
+    errorMessage: String? = null
 ) {
     val defaultIcon: @Composable () -> Unit = {
         Icon(

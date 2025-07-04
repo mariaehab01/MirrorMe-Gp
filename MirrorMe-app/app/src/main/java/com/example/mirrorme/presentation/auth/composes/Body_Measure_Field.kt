@@ -53,10 +53,10 @@ fun BodyMeasureField(
             },
             modifier = Modifier
                 .width(90.dp)
-                .height(50.dp), // standard TextField height
+                .height(50.dp),
             textStyle = LocalTextStyle.current.copy(
                 fontSize = 14.sp,
-                color = mainBlue // ensure text is visible
+                color = mainBlue
             ),
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Number,

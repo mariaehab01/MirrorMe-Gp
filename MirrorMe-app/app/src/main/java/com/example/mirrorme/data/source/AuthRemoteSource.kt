@@ -8,13 +8,11 @@ class AuthRemoteSource(private val supabaseClient: SupabaseClient) {
 
     suspend fun signUp(emailValue: String, passwordValue: String): Result<Unit> {
         return try {
-            // sign up
             supabaseClient.auth.signUpWith(Email) {
                 email = emailValue
                 password = passwordValue
             }
 
-            // Sign-in immediately after sign-up (to get session and satisfy RLS later)
             supabaseClient.auth.signInWith(Email) {
                 email = emailValue
                 password = passwordValue

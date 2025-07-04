@@ -53,7 +53,7 @@ fun HomeScreen(navController: NavHostController) {
     }
 
     val femaleCategoryMap = mapOf(
-        "tops" to listOf("top", "blouse", "hoodie", "t-shirt", "polo", "longsleeve", "undershirt"),
+        "tops" to listOf("top", "blouse", "hoodie", "t-shirt", "polo", "undershirt"),
         "pants" to listOf("pants", "shorts"),
         "skirts" to listOf("skirt"),
         "dresses" to listOf("dress"),

@@ -54,7 +54,6 @@ fun TopBarSection(onMenuClick: () -> Unit, navController: NavHostController) {
         Text("MirrorMe", fontSize = 22.sp, color = mainBlue)
 
         IconButton(onClick = {
-            //navigate to cart screen
             navController.navigate("cart")
         }) {
                 Icon(painterResource(id = R.drawable.cart),

@@ -54,7 +54,6 @@ fun ColorSizeQuantitySection(
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            // --- Color ---
             Text("Color", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = itemsBlue)
             Spacer(modifier = Modifier.height(4.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -121,7 +120,6 @@ fun ColorSizeQuantitySection(
 
         Spacer(modifier = Modifier.width(16.dp))
 
-        // --- Available + Quantity ---
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text("Available", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = itemsBlue)
             Spacer(modifier = Modifier.height(4.dp))

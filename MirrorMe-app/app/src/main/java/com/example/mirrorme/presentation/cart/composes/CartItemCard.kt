@@ -78,7 +78,7 @@ fun CartItemCard(item: CartItem, viewModel: CartViewModel) {
 
                     IconButton(
                         onClick = { viewModel.incrementQuantity(item) },
-                        enabled = item.quantity < 10 // disable button if quantity is max
+                        enabled = item.quantity < 10
                     ) {
                         Icon(Icons.Default.Add, contentDescription = null, tint = if (item.quantity < 10) Color.Black else Color.Gray)
                     }

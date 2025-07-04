@@ -39,25 +39,6 @@ import com.example.mirrorme.ui.theme.mainPink
 import com.example.mirrorme.R
 import com.example.mirrorme.di.ServiceLocator
 
-//class SignIn : ComponentActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContent {
-//            MirrorMeTheme {
-//                val navController = rememberNavController()
-//                NavHost(navController = navController, startDestination = "signIn") {
-//                    composable("signIn") {
-//                        SignInContent(navController = navController)
-//                    }
-//                    composable("signUp") {
-//                        SignUpContent(navController = navController)
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
-
 @Composable
 fun SignInContent(
     navController: NavHostController,

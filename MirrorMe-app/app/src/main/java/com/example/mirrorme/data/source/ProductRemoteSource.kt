@@ -59,7 +59,4 @@ class ProductRemoteSource(private val client: SupabaseClient) {
             Result.failure(e)
         }
     }
-
-
-
 }

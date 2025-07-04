@@ -68,6 +68,7 @@ class itemViewModel : ViewModel() {
             }
         }
     }
+
     fun loadCompatibleItems(productId: Int) {
         viewModelScope.launch {
             Log.d("ItemViewModel", "Calling getCompatibleItemIds for $productId")
@@ -96,38 +97,25 @@ class itemViewModel : ViewModel() {
         }
     }
 
-
-
-//    private fun loadRecommendedProducts() {
-//        viewModelScope.launch {
-//            val products = mutableListOf<Product>()
-//            for (id in similarItems) {
-//                val result = getProductByIdUseCase(id)
-//                result.onSuccess { product ->
-//                    products.add(product)
-//                }
-//            }
-//            recommendedProducts = products
-//        }
-//    }
     private fun loadSimilarProducts() {
         viewModelScope.launch {
             val products = similarItems.map { id ->
                 async {
                     val result = getProductByIdUseCase(id+1)
-                    result.getOrNull()  // Returns Product if success, else null
+                    result.getOrNull()
                 }
             }.awaitAll()
 
             similarProducts = products.filterNotNull()
         }
     }
+
     private fun loadCompatibleProducts() {
         viewModelScope.launch {
             val products = compatibleItems.map { id ->
                 async {
                     val result = getProductByIdUseCase(id+1)
-                    result.getOrNull()  // Returns Product if success, else null
+                    result.getOrNull()
                 }
             }.awaitAll()
 

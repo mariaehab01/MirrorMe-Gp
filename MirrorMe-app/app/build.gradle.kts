@@ -91,7 +91,6 @@ dependencies {
     // WindowManager
     implementation ("androidx.window:window:1.1.0-alpha03")
 
-
     // MediaPipe Library
     implementation ("com.google.mediapipe:tasks-vision:0.10.14")
 
@@ -104,7 +103,6 @@ dependencies {
     // Gson Converter (to parse JSON into your data models)
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
 
-    // (Optional but recommended for logging network calls)
     implementation ("com.squareup.okhttp3:logging-interceptor:4.9.1")
 
 }
