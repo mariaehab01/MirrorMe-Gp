@@ -5,6 +5,8 @@ import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface ApiService {
+    data class OutfitRequest(val seed_item_id: Int)
+
     @POST("api/v1/outfit/generate")
-    suspend fun generateOutfit(@Body body: Map<String, Int>): OutfitResponse
+    suspend fun generateOutfit(@Body body: OutfitRequest): OutfitResponse
 }

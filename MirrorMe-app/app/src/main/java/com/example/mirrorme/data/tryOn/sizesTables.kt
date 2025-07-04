@@ -2,17 +2,20 @@ package com.example.mirrorme.data.tryOn
 
 import io.github.sceneview.math.Scale
 import io.github.sceneview.node.ModelNode
+/**
+ * Represents a T-shirt size with its dimensions in centimeters.
+ */
 
 data class TshirtSize(
     val name: String,
     val chestCm: Float,
-    val waistCm: Float, // 👈 New field
+    val waistCm: Float,
     val lengthCm: Float,
     val sleeveCm: Float
 )
 
 
-
+// shirt sizes for women
 val womenTshirtSizes = mapOf(
     "S" to TshirtSize("S", chestCm = 84f, waistCm = 76f, lengthCm = 60f, sleeveCm = 14f),
     "M" to TshirtSize("M", chestCm = 89f, waistCm = 80f, lengthCm = 62f, sleeveCm = 15f),
@@ -21,6 +24,7 @@ val womenTshirtSizes = mapOf(
     "XXL" to TshirtSize("XXL", chestCm = 104f, waistCm = 95f, lengthCm = 68f, sleeveCm = 18f)
 )
 
+// shirt sizes for men
 val menTshirtSizes = mapOf(
     "S" to TshirtSize("S", chestCm = 92f, waistCm = 82f, lengthCm = 68f, sleeveCm = 22f),
     "M" to TshirtSize("M", chestCm = 97f, waistCm = 87f, lengthCm = 70f, sleeveCm = 23f),
@@ -29,7 +33,7 @@ val menTshirtSizes = mapOf(
     "XXL" to TshirtSize("XXL", chestCm = 112f, waistCm = 102f, lengthCm = 76f, sleeveCm = 26f)
 )
 
-
+// Function to scale a 3D model node to match the specified T-shirt size
 fun scaleModelToSize(modelNode: ModelNode, size: TshirtSize) {
     val baseChest = 92f  // Men's S
     val baseLength = 65f

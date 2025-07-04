@@ -6,7 +6,9 @@ import com.example.mirrorme.domain.model.Profile
 import com.example.mirrorme.di.ServiceLocator
 import kotlinx.coroutines.launch
 import androidx.compose.runtime.*
-
+/** * ViewModel for managing the state of the 3D view in the camera try-on feature.
+ * It handles loading the user's profile and managing loading states and errors.
+ */
 class View3DViewModel : ViewModel() {
 
     private val profileRepository = ServiceLocator.profileRepository

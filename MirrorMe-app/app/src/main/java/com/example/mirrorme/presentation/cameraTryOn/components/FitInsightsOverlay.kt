@@ -9,7 +9,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.nativeCanvas
 import android.graphics.Paint
-
+/** * FitInsightsOverlay.kt
+ *
+ * This file contains a composable function that draws fit insights overlay on the camera view.
+ * It displays lines and labels indicating the fit of the chest and waist based on their positions.
+ */
 @Composable
 fun FitInsightsOverlay(
     chestPosition: Offset?,
@@ -17,11 +21,12 @@ fun FitInsightsOverlay(
     chestFit: String,
     waistFit: String,
 ) {
+    // Draw the fit insights overlay on the camera view
     Canvas(modifier = Modifier.fillMaxSize()) {
         chestPosition?.let {
             drawFitLineWithLabel(
-                start = it,
-                end = Offset(it.x + 150f, it.y- 150f),
+                start = it, // Start position of the chest line(as detected by the pose landmarker)
+                end = Offset(it.x + 150f, it.y- 150f), // End position of the chest line
                 fitText = chestFit,
                 color = getFitColor(chestFit)
             )
@@ -29,8 +34,8 @@ fun FitInsightsOverlay(
 
         waistPosition?.let {
             drawFitLineWithLabel(
-                start = it,
-                end = Offset(it.x + 150f, it.y + 150f),
+                start = it, // Start position of the waist line(as detected by the pose landmarker)
+                end = Offset(it.x + 150f, it.y + 150f), // End position of the waist line
                 fitText = waistFit,
                 color = getFitColor(waistFit)
             )
@@ -39,17 +44,19 @@ fun FitInsightsOverlay(
     }
 }
 
+// Extension function to draws a line from the start to the end position and labels it with the fit text.
 fun DrawScope.drawFitLineWithLabel(start: Offset, end: Offset, fitText: String, color: Color) {
     drawLine(color = color, start = start, end = end, strokeWidth = 4f)
     drawContext.canvas.nativeCanvas.apply {
         val paint = Paint().apply {
-            this.color = android.graphics.Color.WHITE
+            this.color = android.graphics.Color.BLUE
             textSize = 40f
         }
         drawText(fitText, end.x, end.y, paint)
     }
 }
 
+// function to get the color based on the fit type
 fun getFitColor(fit: String): Color {
     return when (fit.lowercase()) {
         "perfect" -> Color.Green

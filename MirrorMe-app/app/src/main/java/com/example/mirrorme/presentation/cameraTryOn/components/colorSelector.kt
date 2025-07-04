@@ -13,7 +13,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.mirrorme.ui.theme.popColor
-
+/** * Composable function to display a horizontal list of color options for selection.
+ * Each color is displayed as a circle, and the selected color is highlighted with a border.
+ *
+ */
 @Composable
 fun ColorSelector(
     colorList: List<Int>,
@@ -22,11 +25,11 @@ fun ColorSelector(
 ) {
     val itemSize: Dp = 30.dp
     val spacing: Dp = 16.dp
-    val totalWidth = (itemSize * 6) + (spacing * 4)  // ✅ Width for exactly 5 items + 4 spacings
+    val totalWidth = (itemSize * 6) + (spacing * 4)  // Width for exactly 5 items + 4 spacings
 
     Box(
         modifier = Modifier
-            .padding(start = 30.dp, top = 8.dp, bottom = 8.dp) // ✅ Keep your original paddings
+            .padding(start = 30.dp, top = 8.dp, bottom = 8.dp) // Keep your original paddings
             .width(totalWidth)
     ) {
         LazyRow(

@@ -18,7 +18,9 @@ import com.example.mirrorme.data.source.ml.SimilarityRemoteSource
 import com.example.mirrorme.domain.repository.AuthRepository
 import com.example.mirrorme.domain.repository.ProfileRepository
 import com.example.mirrorme.domain.repository.MLRepository
+import com.example.mirrorme.domain.usecase.GetCompatibleUseCase
 import com.example.mirrorme.domain.usecase.GetLastScreenUseCase
+import com.example.mirrorme.domain.usecase.GetOutfitItemsUseCase
 import com.example.mirrorme.domain.usecase.GetProductsUseCase
 import com.example.mirrorme.domain.usecase.GetProfileUseCase
 import com.example.mirrorme.domain.usecase.GetSimilarItemsUseCase
@@ -56,7 +58,7 @@ object ServiceLocator {
             .build()
 
         Retrofit.Builder()
-            .baseUrl("http://192.168.1.27:8000/")
+            .baseUrl("https://outfit-model-production.up.railway.app/")
             .client(client)  // <<<<< Add client with logging
             .addConverterFactory(GsonConverterFactory.create())
             .build()
@@ -133,13 +135,12 @@ object ServiceLocator {
     }
 
     val getComptibleItemsUseCase by lazy {
-        GetSimilarItemsUseCase(mlRepository)
+        GetCompatibleUseCase(mlRepository)
     }
 
     val getOutfitItemsUseCase by lazy {
-        GetSimilarItemsUseCase(mlRepository)
+        GetOutfitItemsUseCase(mlRepository)
     }
-
     // --- Session ---
     private lateinit var sessionPreferences: SessionPreferences
     lateinit var setLastScreenUseCase: SetLastScreenUseCase

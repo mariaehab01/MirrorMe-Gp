@@ -56,20 +56,25 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
     var colorScrollStart by remember { mutableStateOf(0) }
     var sizeScrollStart by remember { mutableStateOf(0) }
     var similarScrollStart by remember { mutableStateOf(0) }
+    var compatibleScrollStart by remember { mutableStateOf(0) }
+    var outfitScrollStart by remember { mutableStateOf(0) }
+
     var showOutfitContainer by remember { mutableStateOf(false) }
     val scrollState = rememberScrollState()
 
     val colors = colorList.map { ComposeColor(it) }
     val sizes = listOf("S", "M", "L", "XL", "XXL", "3XL", "4XL")
 
-    val finedProductId = productId - 1 // Assuming productId is 0-based index
 
     LaunchedEffect(productId) {
         Log.d("ItemInfoScreen", "Calling loadSimilarItems with $productId")
 
         viewModel.loadProduct(productId)
-        viewModel.loadSimilarItems(finedProductId) // Assuming productId is 0-based index
-        viewModel.loadCompatibleItems(finedProductId)
+        viewModel.loadSimilarItems(productId)
+        viewModel.loadCompatibleItems(productId)
+        viewModel.loadOutfitItems(productId)
+
+        viewModel.loadCompatibleItems(productId)
     }
 
 
@@ -182,7 +187,7 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
                             }
                         },
                         onGenerateOutfit = {
-                            viewModel.loadOutfitItems(finedProductId)
+                            viewModel.loadOutfitItems(productId)
                             showOutfitContainer = true }
                     )
 
@@ -205,9 +210,9 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
 //                     -------- Suggestions Scrollable --------
                     ScrollableRowWithArrows(
                         title = "Suggestions",
-                        products = viewModel.similarProducts,
-                        scrollStart = similarScrollStart,
-                        onScrollChange = { similarScrollStart = it },
+                        products = viewModel.compatibleProducts,
+                        scrollStart = compatibleScrollStart,
+                        onScrollChange = { compatibleScrollStart = it },
                         boxColor = Color.LightGray,
                         emptyMessage = "Compatible items will be ready soon"
                     )
@@ -224,8 +229,10 @@ fun ItemInfoScreen(productId: Int, navController: NavHostController, cartViewMod
                         ScrollableRowWithArrows(
                             title = "Generated Outfit",
                             products = viewModel.outfitProducts,
-                            scrollStart = 0,
-                            onScrollChange = { /* Optional: Implement outfit scroll start state */ },
+                            scrollStart = outfitScrollStart,
+                            onScrollChange = {
+                                outfitScrollStart=it
+                            },
                             boxColor = Color.Gray,
                             emptyMessage = "No generated outfit found",
                             onItemClick = { selectedProduct ->

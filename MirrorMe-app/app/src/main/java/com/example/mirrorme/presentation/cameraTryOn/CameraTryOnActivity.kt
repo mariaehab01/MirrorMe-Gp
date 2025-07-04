@@ -31,11 +31,20 @@ import com.example.mirrorme.presentation.cameraTryOn.utils.checkCameraPermission
 import com.example.mirrorme.presentation.cameraTryOn.utils.handlePoseResult
 import io.github.sceneview.node.ModelNode
 
+/**
+ * CameraTryOnActivity is the main activity for the camera try-on feature.
+ * It initializes the camera, loads the 3D model, and handles user interactions
+ * for selecting size and color of the clothing item.
+ * It also observes the user's profile to provide personalized recommendations.
+ * handels pose detection and updates the 3D model accordingly.
+ */
 class CameraTryOnActivity : ComponentActivity() {
+    //Reference to the loaded 3D t-shirt model, to allow updating size or color.
     private var modelNodeRef: ModelNode? = null
+    //Last measured shoulder width in pixels (from pose detection)
     private var lastShoulderDistancePx: Float? = null
     private val viewModel: View3DViewModel by viewModels()
-
+    //camera permission request launcher
     private lateinit var requestPermissionLauncher: androidx.activity.result.ActivityResultLauncher<String>
 
 
@@ -46,7 +55,7 @@ class CameraTryOnActivity : ComponentActivity() {
         requestPermissionLauncher =
             registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
                 if (isGranted) {
-                    viewModel.loadProfile()  // ✅ Start loading profile after permission
+                    viewModel.loadProfile()  // Start loading profile after permission
                     setContent {
                         ProfileObserverScreen()
                     }
@@ -56,11 +65,12 @@ class CameraTryOnActivity : ComponentActivity() {
                     }
                 }
             }
-
+        //ensures permission is granted before rendering the camera + AR UI.
         checkCameraPermissionAndStart(
             context = this,
-            setupTryOnUI = {
-                viewModel.loadProfile()  // ✅ Also load profile here
+            setupTryOnUI = { // This lambda is called when permission is granted,
+                            // loads the profile and sets the content of the tryon
+                viewModel.loadProfile()
                 setContent {
                     ProfileObserverScreen()
                 }
@@ -123,7 +133,7 @@ class CameraTryOnActivity : ComponentActivity() {
                         selectedIndex = selectedSizeIndex,
                         onSizeSelected = { index ->
                             selectedSizeIndex = index
-                            selectedSize.value = sizeList[index] // ✅ update state
+                            selectedSize.value = sizeList[index] // update state
                             modelNodeRef?.let { scaleModelToSize(it, sizeList[index]) }
 
                             lastShoulderDistancePx?.let { shoulderPx ->
@@ -153,6 +163,11 @@ class CameraTryOnActivity : ComponentActivity() {
         }
     }
 
+    /**
+     * Composable function that sets up the AR camera preview with the 3D-
+     * model and MediaPipe pose processing.
+     * It handles loading state, pose detection results, and model updates.
+     */
     @Composable
     fun ARWithCameraPreview(
         selectedSize: State<TshirtSize>,
@@ -172,13 +187,13 @@ class CameraTryOnActivity : ComponentActivity() {
                     createAccurateCameraWithPoseAnd3D(
                         context = context,
                         lifecycleOwner = lifecycleOwner,
-                        setLoading = { isModelLoading = it },   // ✅ Pass Compose loading state
-                        onPoseResult = { resultBundle ->
-                            runOnUiThread {
+                        setLoading = { isModelLoading = it },   // Pass Compose loading state
+                        onPoseResult = { resultBundle ->     //Listens for pose result
+                            runOnUiThread { // Update UI on the main thread
                                 modelNodeRef?.let {
                                     val result =
-                                        resultBundle.results.firstOrNull() ?: return@runOnUiThread
-                                    handlePoseResult(
+                                        resultBundle.results.firstOrNull() ?: return@runOnUiThread // If no pose result, do nothing
+                                    handlePoseResult(  //calls the function to handle pose result updates
                                         result,
                                         it,
                                         onRecommendedSizeChange,
@@ -193,16 +208,16 @@ class CameraTryOnActivity : ComponentActivity() {
                                 }
                             }
                         },
-                        onModelReady = { modelNode ->
-                            modelNodeRef = modelNode
-                            scaleModelToSize(modelNode, selectedSize.value)
-                            applyColorToModel(modelNode, colorList[selectedColorIndex])
+                        onModelReady = { modelNode ->  // Listens for model loading completion
+                            modelNodeRef = modelNode   // Store the reference to the model node
+                            scaleModelToSize(modelNode, selectedSize.value) // Scale the model to the selected size
+                            applyColorToModel(modelNode, colorList[selectedColorIndex]) // Apply the selected color to the model
                         },
                         modelPath = modelUrl
                     )
                 }
             )
-
+            // Show loading indicator when the model is being loaded
             if (isModelLoading) {
                 Box(
                     modifier = Modifier
@@ -216,6 +231,10 @@ class CameraTryOnActivity : ComponentActivity() {
         }
     }
 
+    /**
+     * Composable function that observes the ViewModel's profile state
+     * and displays the Try-On UI once the profile is loaded.
+     */
     @Composable
     fun ProfileObserverScreen() {
         val profile = viewModel.profileUiState

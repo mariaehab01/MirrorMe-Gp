@@ -10,7 +10,7 @@ import java.net.URL
 class SimilarityRemoteSource {
 
     suspend fun getSimilarItemIds(itemId: Int, topK: Int = 7): List<Int> = withContext(Dispatchers.IO) {
-        val url = URL("http://192.168.1.27:5000/api/v1/items/recommendations/$itemId?top_k=$topK")
+        val url = URL("https://similarity-model-production.up.railway.app/api/v1/items/recommendations/$itemId?")
         val connection = url.openConnection() as HttpURLConnection
 
         try {

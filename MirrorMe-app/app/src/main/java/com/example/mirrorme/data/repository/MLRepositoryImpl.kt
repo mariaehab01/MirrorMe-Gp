@@ -20,7 +20,7 @@ class MLRepositoryImpl(
         return compatibilityRemoteSource.getCompatibleItemIds(itemId, topK)
     }
 
-    override suspend fun getOutfitItemIds(seedItemId: Int): Result<List<Int>> {
+    override suspend fun getOutfitItemIds(seedItemId: Int): List<Int> {
         return outfitRemoteSource.generateOutfit(seedItemId)
     }
 

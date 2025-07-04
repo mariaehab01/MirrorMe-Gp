@@ -1,5 +1,9 @@
 package com.example.mirrorme.data.tryOn
 
+/** * Predicts fit insights based on shoulder distance, image width, user height, weight, and selected size.
+ *
+ * @return A pair containing fit insights for chest and waist.
+ */
 fun predictFitInsights(
     shoulderDistancePx: Float,
     imageWidthPx: Int,

@@ -1,12 +1,12 @@
 package com.example.mirrorme.data.model
 
 data class OutfitResponse(
-    val outfit: OutfitItems
+    val outfit: OutfitGroup?
 )
 
-data class OutfitItems(
+data class OutfitGroup(
     val item_count: Int,
-    val item: List<OutfitItem>
+    val items: List<OutfitItem>
 )
 
 data class OutfitItem(

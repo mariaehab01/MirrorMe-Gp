@@ -13,6 +13,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mirrorme.ui.theme.popColor
 
+/**
+ * Composable function to display the recommended size for the user.
+ * It shows a text label and the recommended size in a prominent color.
+ *
+ */
 @Composable
 fun SizeRecommendationUI(
     recommendedSize: String,
@@ -33,7 +38,7 @@ fun SizeRecommendationUI(
             )
             Text(
                 text = recommendedSize,
-                color = popColor,  // Example pop color (Amber/Yellow)
+                color = popColor,
                 fontSize = 24.sp
             )
         }

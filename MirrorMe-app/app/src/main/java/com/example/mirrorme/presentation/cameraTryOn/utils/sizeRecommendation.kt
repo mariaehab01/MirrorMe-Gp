@@ -5,6 +5,10 @@ import com.example.mirrorme.data.tryOn.TshirtSize
 import com.example.mirrorme.data.tryOn.menTshirtSizes
 import com.example.mirrorme.data.tryOn.womenTshirtSizes
 
+/**
+ * Recommends a T-shirt size based on height, weight, shoulder distance, image width,
+ * user body shape
+ * */
 fun recommendSize(
     heightCm: Float,
     weightKg: Float,
@@ -13,6 +17,7 @@ fun recommendSize(
     userBodyShape: String,
     gender: String
 ): TshirtSize {
+    //Picks the correct sizing system depending on gender.
     val sizeTable = when (gender.lowercase()) {
         "men" -> menTshirtSizes.values.toList()
         "women" -> womenTshirtSizes.values.toList()
@@ -48,12 +53,12 @@ fun recommendSize(
 
     Log.d("SizeRecommend", "Shoulder Width: $shoulderWidthCm cm")
 
-    if (shoulderWidthCm > 45) {  // Example threshold
+    if (shoulderWidthCm > 45) { // If shoulder width is larger than 45 cm, increase size
         if (baseSizeName == "S") baseSizeName = "M"
         else if (baseSizeName == "M") baseSizeName = "L"
         else if (baseSizeName == "L") baseSizeName = "XL"
         else if (baseSizeName == "XL") baseSizeName = "XXL"
-    } else if (shoulderWidthCm < 35) {
+    } else if (shoulderWidthCm < 35) { // If shoulder width is smaller than 35 cm, decrease size
         if (baseSizeName == "XL") baseSizeName = "L"
         else if (baseSizeName == "L") baseSizeName = "M"
     }
