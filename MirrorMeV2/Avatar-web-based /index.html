@@ -3,22 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>3D T-Shirt Try-On with Fit Insights</title>
-    <link rel="stylesheet" href="src/style.css">
-
+  <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-  <div id="ui">
+
+  <!-- LOADER -->
+  <div id="loader" class="loader-overlay">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- MAIN UI (hidden initially until models load) -->
+  <div id="ui" style="display: none;">
     <div id="fitMessage">Recommended size: --</div>
-
-    <input id="heightInput" type="number" placeholder="Height (cm)" value="170">
-    <input id="weightInput" type="number" placeholder="Weight (kg)" value="70">
-
-    <select id="shapeSelect">
-      <option value="Average">Average</option>
-      <option value="Slim">Slim</option>
-      <option value="Muscular">Muscular</option>
-      <option value="Curvy">Curvy</option>
-    </select>
 
     <select id="sizeSelect">
       <option value="S">S</option>
@@ -36,11 +32,9 @@
       <option value="black">Black</option>
     </select>
 
-    <input id="shoulderInput" type="number" placeholder="Shoulder Px" value="200">
     <input id="imageWidthInput" type="number" placeholder="Image Width Px" value="1080">
 
     <div id="fitInsights">Fit Insights: --</div>
-
   </div>
 
   <script type="module" src="src/main.js"></script>
