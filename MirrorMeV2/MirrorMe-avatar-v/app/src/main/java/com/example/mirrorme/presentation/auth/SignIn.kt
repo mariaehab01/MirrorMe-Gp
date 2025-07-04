@@ -122,10 +122,6 @@ fun SignInContent(
                             fontSize = 16.sp,
                             fontWeight = FontWeight.Bold,
                             textDecoration = TextDecoration.Underline,
-//                            modifier = Modifier.clickable {
-//                                // TODO: Navigate to Forgot Password screen
-//                                // navController.navigate("forgotPassword")
-//                            }
                         )
                     }
                 }
@@ -133,11 +129,9 @@ fun SignInContent(
 
             Spacer(modifier = Modifier.height(50.dp))
 
-            // Sign In button
             Button(
                 onClick = {
                     emailError = if (android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) null else "Invalid email"
-                    //if password is blank
                     passwordError = if (password.isNotBlank()) null else "Please enter your password"
 
                     if (emailError == null && passwordError == null) {

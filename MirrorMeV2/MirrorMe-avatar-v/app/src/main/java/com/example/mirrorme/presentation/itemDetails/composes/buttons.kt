@@ -43,7 +43,6 @@ fun ActionButtons(onTryOn: () -> Unit, onGenerateOutfit: () -> Unit, onAddToBag:
 
     Spacer(modifier = Modifier.height(12.dp))
 
-    // Add To Bag Button
     Button(
         onClick = { onAddToBag() },
         modifier = Modifier
