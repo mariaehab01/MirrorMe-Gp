@@ -101,7 +101,7 @@ class itemViewModel : ViewModel() {
         viewModelScope.launch {
             val products = similarItems.map { id ->
                 async {
-                    val result = getProductByIdUseCase(id+1)
+                    val result = getProductByIdUseCase(id)
                     result.getOrNull()
                 }
             }.awaitAll()
@@ -114,7 +114,7 @@ class itemViewModel : ViewModel() {
         viewModelScope.launch {
             val products = compatibleItems.map { id ->
                 async {
-                    val result = getProductByIdUseCase(id+1)
+                    val result = getProductByIdUseCase(id)
                     result.getOrNull()
                 }
             }.awaitAll()
@@ -127,7 +127,7 @@ class itemViewModel : ViewModel() {
         viewModelScope.launch {
             val products = outfitItems.map { id ->
                 async {
-                    val result = getProductByIdUseCase(id + 1)
+                    val result = getProductByIdUseCase(id)
                     Log.d("ItemViewModel", "Outfit Item IDs result: $result")
                     result.getOrNull()
                 }

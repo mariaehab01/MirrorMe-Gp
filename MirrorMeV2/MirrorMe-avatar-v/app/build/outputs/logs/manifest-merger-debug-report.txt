@@ -1,0 +1,561 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:2:1-28:12
+MERGED from [io.coil-kt:coil-compose:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/fe9991d24557ad0d73beb035bd1d206f/transformed/coil-compose-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/6125f0366cb8b0e3fa0fa6f544c1bee0/transformed/coil-compose-base-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/22998ac37d53a1b7c2b73baa5531ad6d/transformed/coil-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/3bf7c37406155224abe1e0ce3f1469f8/transformed/coil-base-2.6.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/fa93b8a1eadc8f9cadfbd10948a842e0/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/e9e7c4641511d3c6730c9a073d2e9fa1/transformed/navigation-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/89ea6d50f67087994fb9163d9d9063a7/transformed/navigation-common-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d19b9859e209d18b91df6966a99dc1c4/transformed/navigation-fragment-2.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8e9f1d6bda8d06efb7514505ea9c3dd9/transformed/navigation-fragment-ktx-2.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a3a54109df99a8bf3de57642c131b5ac/transformed/navigation-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2220e54841f3704c9d2d20a1ebfcff7/transformed/navigation-ui-ktx-2.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-ui:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/357e4c516bfcdf4c7505683839b37780/transformed/navigation-ui-2.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2c99add5d8c0f78791301badda713f4/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/6f702a14fed5ad233bfc7c90c0af686c/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/366e01c46717856988fd7c4eea28f6d7/transformed/appcompat-1.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/mariam/.gradle/caches/8.11.1/transforms/3655b5a1128a9e78803adfbf13fe9768/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/32c14377d4228f0fac8221e99f682dd6/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.6.2] /Users/mariam/.gradle/caches/8.11.1/transforms/57fecfd5ae7a2d3da87138d16a2a8fde/transformed/fragment-1.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material3:material3-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d794f4741301386644bec2fbdfb75e88/transformed/material3-release/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bff07ee2395a8419a595446fddb5844c/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9037c51b15c6c36b8f5bf676130b0022/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/a7877ffe594bf102dff48df4d0ff2008/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/d5fd0ca655413e589ea866e8b493e2ba/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.compose.material:material-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/eb3997a091a675525e6c49aeba0a52d6/transformed/material-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d7a5b813a6fb97eae7e87a2f9f6eb019/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/19dfd39d9450dff297f70a575ae4716d/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/b9d625ad3c70ed9c9614509f51fb4850/transformed/animation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/c5ce9d0fac9fb310660f65c902a1ed78/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/e619c651e7021876fe9d6d53765220d9/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/d5c3ff8c467be144246955a320a2024e/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/786a60ca44460b2133dcd7ba4132524d/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/0a9b449115a277c0af69e737d472f089/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/69d15e0ad2b92869bd639d2cc10c66ef/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/24c951be108b1c7af3b40935e69782c8/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:2:1-20:12
+MERGED from [io.github.jan-tennert.supabase:postgrest-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/55e8ea0a1ef39e6bc2490585ec8af567/transformed/postgrest-kt-debug/AndroidManifest.xml:2:1-7:12
+MERGED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:2:1-20:12
+MERGED from [io.github.jan-tennert.supabase:supabase-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/047156eb9fca879ee909473de1d0288a/transformed/supabase-kt-debug/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/2f4f50f0807c6b462c4fdae95288cd7f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a8377ba7901e80387d1ad65658fcb78f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.8.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5e27bd6466372f5ece94e4a6ab840e57/transformed/browser-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/69978d2f8a552bfc4cf397d99189341d/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/3070e8f65a65d40be78f0aa1c5979b0a/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/70abf69024bd699aeca04ec46af620fc/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/44842578b3a4ab05d748ff9bb40c4e70/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/361f2a72bb43d05d75ca8ecb4ec62e82/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/284c77e8235dcda8a363efadc3891c51/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/mariam/.gradle/caches/8.11.1/transforms/93992b3d5dd58af474e2ec02f50c9ff5/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c5a40b9042796d7657ee6ab4f3c2e072/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8f32615340cc10299aeb52f52e3f3d2d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c281a3d6f744a6cb6b539e86e6026d8d/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d389a93ba2ce3ec6af098a10c1c99f61/transformed/autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/3729293ae4f6b4503028deed53a80a01/transformed/graphics-path-1.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/25cca368d6e597e5ec2bff938029cd76/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/74a9902b8f56fd609b10bb2518487270/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/243c225eaef643ae152d5a4ce12910c2/transformed/lifecycle-viewmodel-2.9.0/AndroidManifest.xml:2:1-5:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d6620d07d949fb673e6dab4c6f626b6f/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5db990b304904b5d91abea4c777bea5d/transformed/lifecycle-livedata-core-ktx-2.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a9fd7bdd3db9f9fb07bb4c83ca38d512/transformed/savedstate-ktx-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/39be04c85c8bae7df17cbe674ba0b58e/transformed/savedstate-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5dfdd92b43e9b495fa8b96147fa75aa2/transformed/savedstate-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9e05cc78468fe1406b287f701beff122/transformed/lifecycle-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/24a1ce1935eea733adb90c85a0789d11/transformed/lifecycle-livedata-core-2.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/f92e720fbfea72911623eacbf41b51af/transformed/lifecycle-viewmodel-ktx-2.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/581c712a1993620fb76db033efb12bda/transformed/lifecycle-livedata-2.9.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/2aa3b6ac84f2c434bfb3ae98fb5fac4b/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ebf9f9dc85442607477b13d17a1bb945/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ad04f79ec47933f94ca59668bc4bfb2d/transformed/material-icons-extended-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d8fa5cca3f31718f3b5f18f6f2cea102/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/4777b58e0c34332d726aec5ddd7ad301/transformed/ui-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.activity:activity:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/927658273d7d51240a12800187a915c3/transformed/activity-1.10.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/41df3686eb42af178eaee56f555e4836/transformed/activity-ktx-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/8f03d44ba30b40c8205fa30c26525121/transformed/activity-compose-1.10.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a7202783a5fd8540957a36efcf2f8d15/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/28cd3636c8572945e6d79bb5bd68a2f4/transformed/core-ktx-1.16.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/4086142d93a474ed388b383787a734bd/transformed/runtime-saveable-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/6b7eeab9729548f2422bdcb533905032/transformed/runtime-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/mariam/.gradle/caches/8.11.1/transforms/406a48071df9cd82ab5a24d462668995/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/4a3928b270a05230bc59e74b895c6d12/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/2e1209cdf56e4f4a40c49e7e7d961068/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:17:1-35:12
+MERGED from [com.russhwolf:multiplatform-settings-coroutines-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/e853895ec1612c0a6b0ec8d1d59f159b/transformed/multiplatform-settings-coroutines-debug/AndroidManifest.xml:2:1-7:12
+MERGED from [co.touchlab:kermit-android-debug:2.0.4] /Users/mariam/.gradle/caches/8.11.1/transforms/f3612c7bacf31f098e97a54f9d03a02e/transformed/kermit-debug/AndroidManifest.xml:2:1-7:12
+MERGED from [com.soywiz.korlibs.krypto:krypto-android:4.0.10] /Users/mariam/.gradle/caches/8.11.1/transforms/9ce45caa920c9c5754fd4c01c13f794a/transformed/krypto-debug/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/3efe30aeaa253ae6ddbabb510725c5d1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/26789fc355ee454bbb28b15538145d47/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/539ae40cef681ec34193b34a52ee143d/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/efa53109d8ee23e9765f8e8e0c61b68e/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ea32e70628ed405941d67f878275d9a5/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/mariam/.gradle/caches/8.11.1/transforms/6acf328d8da2a24b9375141cdbea00d1/transformed/exifinterface-1.3.7/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/eee5bfca92b30265cdc389478f73b81c/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d4becf216b74724b5ac6284185560328/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/90daf335ce9819d2852ea2ae9fe3ebc1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/94aa9a24330aeb56e1d2792971b40e66/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.russhwolf:multiplatform-settings-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ebf3a0987cc5dc8670e6be4c06f06137/transformed/multiplatform-settings-debug/AndroidManifest.xml:2:1-7:12
+MERGED from [co.touchlab:kermit-core-android-debug:2.0.4] /Users/mariam/.gradle/caches/8.11.1/transforms/e92cbea16c90be0a8931ab1c9c30dbe0/transformed/kermit-core-debug/AndroidManifest.xml:2:1-7:12
+	package
+		INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:3:5-67
+	android:name
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:3:22-64
+application
+ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:5:5-26:19
+INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:5:5-26:19
+MERGED from [com.google.android.material:material:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2c99add5d8c0f78791301badda713f4/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2c99add5d8c0f78791301badda713f4/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/6f702a14fed5ad233bfc7c90c0af686c/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/6f702a14fed5ad233bfc7c90c0af686c/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:24:5-35:19
+MERGED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:24:5-35:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:8:5-18:19
+MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:8:5-18:19
+MERGED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:8:5-18:19
+MERGED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:8:5-18:19
+MERGED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/2e1209cdf56e4f4a40c49e7e7d961068/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/2e1209cdf56e4f4a40c49e7e7d961068/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:23:5-33:19
+MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/539ae40cef681ec34193b34a52ee143d/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/539ae40cef681ec34193b34a52ee143d/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:13:9-35
+	android:label
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:11:9-42
+	android:fullBackupContent
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:9:9-54
+	android:roundIcon
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:12:9-54
+	android:icon
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:10:9-43
+	android:allowBackup
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:6:9-35
+	android:forceDarkAllowed
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:15:9-41
+	android:theme
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:14:9-46
+	android:dataExtractionRules
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:8:9-65
+	android:usesCleartextTraffic
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:7:9-44
+activity#com.example.mirrorme.MainActivity
+ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:16:9-24:20
+	android:exported
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:19:13-36
+	android:theme
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:18:13-50
+	android:name
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:17:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:20:13-23:29
+action#android.intent.action.MAIN
+ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:22:27-74
+uses-sdk
+INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+MERGED from [io.coil-kt:coil-compose:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/fe9991d24557ad0d73beb035bd1d206f/transformed/coil-compose-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/fe9991d24557ad0d73beb035bd1d206f/transformed/coil-compose-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/6125f0366cb8b0e3fa0fa6f544c1bee0/transformed/coil-compose-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/6125f0366cb8b0e3fa0fa6f544c1bee0/transformed/coil-compose-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/22998ac37d53a1b7c2b73baa5531ad6d/transformed/coil-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/22998ac37d53a1b7c2b73baa5531ad6d/transformed/coil-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/3bf7c37406155224abe1e0ce3f1469f8/transformed/coil-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.6.0] /Users/mariam/.gradle/caches/8.11.1/transforms/3bf7c37406155224abe1e0ce3f1469f8/transformed/coil-base-2.6.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/fa93b8a1eadc8f9cadfbd10948a842e0/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/fa93b8a1eadc8f9cadfbd10948a842e0/transformed/appcompat-resources-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/e9e7c4641511d3c6730c9a073d2e9fa1/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/e9e7c4641511d3c6730c9a073d2e9fa1/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/89ea6d50f67087994fb9163d9d9063a7/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/89ea6d50f67087994fb9163d9d9063a7/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d19b9859e209d18b91df6966a99dc1c4/transformed/navigation-fragment-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d19b9859e209d18b91df6966a99dc1c4/transformed/navigation-fragment-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8e9f1d6bda8d06efb7514505ea9c3dd9/transformed/navigation-fragment-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8e9f1d6bda8d06efb7514505ea9c3dd9/transformed/navigation-fragment-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a3a54109df99a8bf3de57642c131b5ac/transformed/navigation-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a3a54109df99a8bf3de57642c131b5ac/transformed/navigation-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2220e54841f3704c9d2d20a1ebfcff7/transformed/navigation-ui-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2220e54841f3704c9d2d20a1ebfcff7/transformed/navigation-ui-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-ui:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/357e4c516bfcdf4c7505683839b37780/transformed/navigation-ui-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/357e4c516bfcdf4c7505683839b37780/transformed/navigation-ui-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2c99add5d8c0f78791301badda713f4/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c2c99add5d8c0f78791301badda713f4/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/6f702a14fed5ad233bfc7c90c0af686c/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/6f702a14fed5ad233bfc7c90c0af686c/transformed/constraintlayout-2.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/366e01c46717856988fd7c4eea28f6d7/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/366e01c46717856988fd7c4eea28f6d7/transformed/appcompat-1.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/mariam/.gradle/caches/8.11.1/transforms/3655b5a1128a9e78803adfbf13fe9768/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/mariam/.gradle/caches/8.11.1/transforms/3655b5a1128a9e78803adfbf13fe9768/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/32c14377d4228f0fac8221e99f682dd6/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/32c14377d4228f0fac8221e99f682dd6/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.6.2] /Users/mariam/.gradle/caches/8.11.1/transforms/57fecfd5ae7a2d3da87138d16a2a8fde/transformed/fragment-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.6.2] /Users/mariam/.gradle/caches/8.11.1/transforms/57fecfd5ae7a2d3da87138d16a2a8fde/transformed/fragment-1.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d794f4741301386644bec2fbdfb75e88/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d794f4741301386644bec2fbdfb75e88/transformed/material3-release/AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bff07ee2395a8419a595446fddb5844c/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bff07ee2395a8419a595446fddb5844c/transformed/accompanist-drawablepainter-0.32.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:21:5-22:38
+MERGED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:21:5-22:38
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9037c51b15c6c36b8f5bf676130b0022/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9037c51b15c6c36b8f5bf676130b0022/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/a7877ffe594bf102dff48df4d0ff2008/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-data-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/a7877ffe594bf102dff48df4d0ff2008/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/d5fd0ca655413e589ea866e8b493e2ba/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/d5fd0ca655413e589ea866e8b493e2ba/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/eb3997a091a675525e6c49aeba0a52d6/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/eb3997a091a675525e6c49aeba0a52d6/transformed/material-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d7a5b813a6fb97eae7e87a2f9f6eb019/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d7a5b813a6fb97eae7e87a2f9f6eb019/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/19dfd39d9450dff297f70a575ae4716d/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/19dfd39d9450dff297f70a575ae4716d/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/b9d625ad3c70ed9c9614509f51fb4850/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/b9d625ad3c70ed9c9614509f51fb4850/transformed/animation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/c5ce9d0fac9fb310660f65c902a1ed78/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/c5ce9d0fac9fb310660f65c902a1ed78/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/e619c651e7021876fe9d6d53765220d9/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/e619c651e7021876fe9d6d53765220d9/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/d5c3ff8c467be144246955a320a2024e/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/d5c3ff8c467be144246955a320a2024e/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/786a60ca44460b2133dcd7ba4132524d/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/786a60ca44460b2133dcd7ba4132524d/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/0a9b449115a277c0af69e737d472f089/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/0a9b449115a277c0af69e737d472f089/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/69d15e0ad2b92869bd639d2cc10c66ef/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/69d15e0ad2b92869bd639d2cc10c66ef/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/24c951be108b1c7af3b40935e69782c8/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/24c951be108b1c7af3b40935e69782c8/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:6:5-44
+MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:6:5-44
+MERGED from [io.github.jan-tennert.supabase:postgrest-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/55e8ea0a1ef39e6bc2490585ec8af567/transformed/postgrest-kt-debug/AndroidManifest.xml:5:5-44
+MERGED from [io.github.jan-tennert.supabase:postgrest-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/55e8ea0a1ef39e6bc2490585ec8af567/transformed/postgrest-kt-debug/AndroidManifest.xml:5:5-44
+MERGED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:6:5-44
+MERGED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:6:5-44
+MERGED from [io.github.jan-tennert.supabase:supabase-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/047156eb9fca879ee909473de1d0288a/transformed/supabase-kt-debug/AndroidManifest.xml:5:5-44
+MERGED from [io.github.jan-tennert.supabase:supabase-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/047156eb9fca879ee909473de1d0288a/transformed/supabase-kt-debug/AndroidManifest.xml:5:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/2f4f50f0807c6b462c4fdae95288cd7f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/2f4f50f0807c6b462c4fdae95288cd7f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a8377ba7901e80387d1ad65658fcb78f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a8377ba7901e80387d1ad65658fcb78f/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.8.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5e27bd6466372f5ece94e4a6ab840e57/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.browser:browser:1.8.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5e27bd6466372f5ece94e4a6ab840e57/transformed/browser-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/69978d2f8a552bfc4cf397d99189341d/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/69978d2f8a552bfc4cf397d99189341d/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/3070e8f65a65d40be78f0aa1c5979b0a/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/3070e8f65a65d40be78f0aa1c5979b0a/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/70abf69024bd699aeca04ec46af620fc/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/70abf69024bd699aeca04ec46af620fc/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/44842578b3a4ab05d748ff9bb40c4e70/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/44842578b3a4ab05d748ff9bb40c4e70/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/361f2a72bb43d05d75ca8ecb4ec62e82/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/361f2a72bb43d05d75ca8ecb4ec62e82/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/284c77e8235dcda8a363efadc3891c51/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/mariam/.gradle/caches/8.11.1/transforms/284c77e8235dcda8a363efadc3891c51/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/mariam/.gradle/caches/8.11.1/transforms/93992b3d5dd58af474e2ec02f50c9ff5/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/mariam/.gradle/caches/8.11.1/transforms/93992b3d5dd58af474e2ec02f50c9ff5/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c5a40b9042796d7657ee6ab4f3c2e072/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c5a40b9042796d7657ee6ab4f3c2e072/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8f32615340cc10299aeb52f52e3f3d2d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8f32615340cc10299aeb52f52e3f3d2d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c281a3d6f744a6cb6b539e86e6026d8d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/c281a3d6f744a6cb6b539e86e6026d8d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d389a93ba2ce3ec6af098a10c1c99f61/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d389a93ba2ce3ec6af098a10c1c99f61/transformed/autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/3729293ae4f6b4503028deed53a80a01/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-path:1.0.1] /Users/mariam/.gradle/caches/8.11.1/transforms/3729293ae4f6b4503028deed53a80a01/transformed/graphics-path-1.0.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/25cca368d6e597e5ec2bff938029cd76/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/25cca368d6e597e5ec2bff938029cd76/transformed/lifecycle-runtime-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/74a9902b8f56fd609b10bb2518487270/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/74a9902b8f56fd609b10bb2518487270/transformed/lifecycle-viewmodel-savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/243c225eaef643ae152d5a4ce12910c2/transformed/lifecycle-viewmodel-2.9.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/243c225eaef643ae152d5a4ce12910c2/transformed/lifecycle-viewmodel-2.9.0/AndroidManifest.xml:4:5-43
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d6620d07d949fb673e6dab4c6f626b6f/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d6620d07d949fb673e6dab4c6f626b6f/transformed/lifecycle-viewmodel-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5db990b304904b5d91abea4c777bea5d/transformed/lifecycle-livedata-core-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5db990b304904b5d91abea4c777bea5d/transformed/lifecycle-livedata-core-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a9fd7bdd3db9f9fb07bb4c83ca38d512/transformed/savedstate-ktx-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a9fd7bdd3db9f9fb07bb4c83ca38d512/transformed/savedstate-ktx-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/39be04c85c8bae7df17cbe674ba0b58e/transformed/savedstate-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-compose-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/39be04c85c8bae7df17cbe674ba0b58e/transformed/savedstate-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5dfdd92b43e9b495fa8b96147fa75aa2/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-android:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5dfdd92b43e9b495fa8b96147fa75aa2/transformed/savedstate-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9e05cc78468fe1406b287f701beff122/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9e05cc78468fe1406b287f701beff122/transformed/lifecycle-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/24a1ce1935eea733adb90c85a0789d11/transformed/lifecycle-livedata-core-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/24a1ce1935eea733adb90c85a0789d11/transformed/lifecycle-livedata-core-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/f92e720fbfea72911623eacbf41b51af/transformed/lifecycle-viewmodel-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/f92e720fbfea72911623eacbf41b51af/transformed/lifecycle-viewmodel-ktx-2.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/581c712a1993620fb76db033efb12bda/transformed/lifecycle-livedata-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/581c712a1993620fb76db033efb12bda/transformed/lifecycle-livedata-2.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/2aa3b6ac84f2c434bfb3ae98fb5fac4b/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/2aa3b6ac84f2c434bfb3ae98fb5fac4b/transformed/lifecycle-runtime-ktx/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ebf9f9dc85442607477b13d17a1bb945/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose-android:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ebf9f9dc85442607477b13d17a1bb945/transformed/lifecycle-viewmodel-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ad04f79ec47933f94ca59668bc4bfb2d/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ad04f79ec47933f94ca59668bc4bfb2d/transformed/material-icons-extended-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d8fa5cca3f31718f3b5f18f6f2cea102/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.7.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d8fa5cca3f31718f3b5f18f6f2cea102/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/4777b58e0c34332d726aec5ddd7ad301/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/4777b58e0c34332d726aec5ddd7ad301/transformed/ui-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/927658273d7d51240a12800187a915c3/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/927658273d7d51240a12800187a915c3/transformed/activity-1.10.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/41df3686eb42af178eaee56f555e4836/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/41df3686eb42af178eaee56f555e4836/transformed/activity-ktx-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/8f03d44ba30b40c8205fa30c26525121/transformed/activity-compose-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.10.1] /Users/mariam/.gradle/caches/8.11.1/transforms/8f03d44ba30b40c8205fa30c26525121/transformed/activity-compose-1.10.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a7202783a5fd8540957a36efcf2f8d15/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/a7202783a5fd8540957a36efcf2f8d15/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/28cd3636c8572945e6d79bb5bd68a2f4/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/28cd3636c8572945e6d79bb5bd68a2f4/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/4086142d93a474ed388b383787a734bd/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/4086142d93a474ed388b383787a734bd/transformed/runtime-saveable-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/6b7eeab9729548f2422bdcb533905032/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/6b7eeab9729548f2422bdcb533905032/transformed/runtime-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/mariam/.gradle/caches/8.11.1/transforms/406a48071df9cd82ab5a24d462668995/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/mariam/.gradle/caches/8.11.1/transforms/406a48071df9cd82ab5a24d462668995/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/4a3928b270a05230bc59e74b895c6d12/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/4a3928b270a05230bc59e74b895c6d12/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/2e1209cdf56e4f4a40c49e7e7d961068/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/2e1209cdf56e4f4a40c49e7e7d961068/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:21:5-44
+MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:21:5-44
+MERGED from [com.russhwolf:multiplatform-settings-coroutines-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/e853895ec1612c0a6b0ec8d1d59f159b/transformed/multiplatform-settings-coroutines-debug/AndroidManifest.xml:5:5-44
+MERGED from [com.russhwolf:multiplatform-settings-coroutines-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/e853895ec1612c0a6b0ec8d1d59f159b/transformed/multiplatform-settings-coroutines-debug/AndroidManifest.xml:5:5-44
+MERGED from [co.touchlab:kermit-android-debug:2.0.4] /Users/mariam/.gradle/caches/8.11.1/transforms/f3612c7bacf31f098e97a54f9d03a02e/transformed/kermit-debug/AndroidManifest.xml:5:5-44
+MERGED from [co.touchlab:kermit-android-debug:2.0.4] /Users/mariam/.gradle/caches/8.11.1/transforms/f3612c7bacf31f098e97a54f9d03a02e/transformed/kermit-debug/AndroidManifest.xml:5:5-44
+MERGED from [com.soywiz.korlibs.krypto:krypto-android:4.0.10] /Users/mariam/.gradle/caches/8.11.1/transforms/9ce45caa920c9c5754fd4c01c13f794a/transformed/krypto-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.soywiz.korlibs.krypto:krypto-android:4.0.10] /Users/mariam/.gradle/caches/8.11.1/transforms/9ce45caa920c9c5754fd4c01c13f794a/transformed/krypto-debug/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/3efe30aeaa253ae6ddbabb510725c5d1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/3efe30aeaa253ae6ddbabb510725c5d1/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/26789fc355ee454bbb28b15538145d47/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/26789fc355ee454bbb28b15538145d47/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/539ae40cef681ec34193b34a52ee143d/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/539ae40cef681ec34193b34a52ee143d/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/efa53109d8ee23e9765f8e8e0c61b68e/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/efa53109d8ee23e9765f8e8e0c61b68e/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ea32e70628ed405941d67f878275d9a5/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ea32e70628ed405941d67f878275d9a5/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/mariam/.gradle/caches/8.11.1/transforms/6acf328d8da2a24b9375141cdbea00d1/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] /Users/mariam/.gradle/caches/8.11.1/transforms/6acf328d8da2a24b9375141cdbea00d1/transformed/exifinterface-1.3.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/eee5bfca92b30265cdc389478f73b81c/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/eee5bfca92b30265cdc389478f73b81c/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d4becf216b74724b5ac6284185560328/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/d4becf216b74724b5ac6284185560328/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/90daf335ce9819d2852ea2ae9fe3ebc1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/90daf335ce9819d2852ea2ae9fe3ebc1/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/94aa9a24330aeb56e1d2792971b40e66/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/94aa9a24330aeb56e1d2792971b40e66/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.russhwolf:multiplatform-settings-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ebf3a0987cc5dc8670e6be4c06f06137/transformed/multiplatform-settings-debug/AndroidManifest.xml:5:5-44
+MERGED from [com.russhwolf:multiplatform-settings-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/ebf3a0987cc5dc8670e6be4c06f06137/transformed/multiplatform-settings-debug/AndroidManifest.xml:5:5-44
+MERGED from [co.touchlab:kermit-core-android-debug:2.0.4] /Users/mariam/.gradle/caches/8.11.1/transforms/e92cbea16c90be0a8931ab1c9c30dbe0/transformed/kermit-core-debug/AndroidManifest.xml:5:5-44
+MERGED from [co.touchlab:kermit-core-android-debug:2.0.4] /Users/mariam/.gradle/caches/8.11.1/transforms/e92cbea16c90be0a8931ab1c9c30dbe0/transformed/kermit-core-debug/AndroidManifest.xml:5:5-44
+	android:targetSdkVersion
+		INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml
+service#androidx.camera.core.impl.MetadataHolderService
+ADDED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:30:9-34:78
+	android:enabled
+		ADDED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:32:13-36
+	android:exported
+		ADDED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:33:13-37
+	tools:ignore
+		ADDED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:34:13-75
+	android:name
+		ADDED from [androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:31:13-75
+activity#androidx.compose.ui.tooling.PreviewActivity
+ADDED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:9:9-17:20
+MERGED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:9:9-17:20
+MERGED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:9:9-17:20
+MERGED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:9:9-17:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:24:9-32:20
+MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:24:9-32:20
+MERGED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/539ae40cef681ec34193b34a52ee143d/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/mariam/.gradle/caches/8.11.1/transforms/539ae40cef681ec34193b34a52ee143d/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+meta-data#io.github.jan.supabase.gotrue.SupabaseInitializer
+ADDED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:14:13-16:52
+	android:value
+		ADDED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:16:17-49
+	android:name
+		ADDED from [io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:15:17-81
+meta-data#io.github.jan.supabase.auth.SupabaseInitializer
+ADDED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:14:13-16:52
+	android:value
+		ADDED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:16:17-49
+	android:name
+		ADDED from [io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:15:17-79
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+permission#com.example.mirrormeV2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+uses-permission#com.example.mirrormeV2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:30:17-78
+activity#androidx.activity.ComponentActivity
+ADDED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:23:9-25:39
+	android:exported
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:24:13-63
+meta-data#com.russhwolf.settings.SettingsInitializer
+ADDED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:30:17-74
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92

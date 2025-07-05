@@ -1,0 +1,198 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.mirrormeV2"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="31"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:3:5-67
+11-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:3:22-64
+12
+13    <permission
+13-->[androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+14        android:name="com.example.mirrormeV2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.example.mirrormeV2.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:5:5-26:19
+20        android:allowBackup="true"
+20-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:6:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.16.0] /Users/mariam/.gradle/caches/8.11.1/transforms/8397ff482435a1021dcc0b0f23299e3d/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+22        android:dataExtractionRules="@xml/data_extraction_rules"
+22-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:8:9-65
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:forceDarkAllowed="false"
+25-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:15:9-41
+26        android:fullBackupContent="@xml/backup_rules"
+26-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:9:9-54
+27        android:icon="@mipmap/ic_launcher"
+27-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:10:9-43
+28        android:label="@string/app_name"
+28-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:11:9-42
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:12:9-54
+30        android:supportsRtl="true"
+30-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:13:9-35
+31        android:testOnly="true"
+32        android:theme="@style/Theme.MirrorMe"
+32-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:14:9-46
+33        android:usesCleartextTraffic="true" >
+33-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:7:9-44
+34        <activity
+34-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:16:9-24:20
+35            android:name="com.example.mirrorme.MainActivity"
+35-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:17:13-41
+36            android:exported="true"
+36-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:19:13-36
+37            android:theme="@style/Theme.MirrorMe" >
+37-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:18:13-50
+38            <intent-filter>
+38-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:20:13-23:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:21:17-69
+39-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:21:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:22:17-77
+41-->/Users/mariam/Documents/GitHub/MirrorMe-Gp/MirrorMeV2/MirrorMe-avatar-v/app/src/main/AndroidManifest.xml:22:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <!--
+46        Service for holding metadata. Cannot be instantiated.
+47        Metadata will be merged from other manifests.
+48        -->
+49        <service
+49-->[androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:30:9-34:78
+50            android:name="androidx.camera.core.impl.MetadataHolderService"
+50-->[androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:31:13-75
+51            android:enabled="false"
+51-->[androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:32:13-36
+52            android:exported="false" />
+52-->[androidx.camera:camera-core:1.2.0-alpha02] /Users/mariam/.gradle/caches/8.11.1/transforms/f4c9525ac4dda6c2a4fc37e3b448f9b8/transformed/camera-core-1.2.0-alpha02/AndroidManifest.xml:33:13-37
+53
+54        <activity
+54-->[androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:23:9-25:39
+55            android:name="androidx.compose.ui.tooling.PreviewActivity"
+55-->[androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:24:13-71
+56            android:exported="true" />
+56-->[androidx.compose.ui:ui-tooling-android:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/dbf10e9da4065da74309743db1a50cf7/transformed/ui-tooling-release/AndroidManifest.xml:25:13-36
+57
+58        <provider
+58-->[androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+59            android:name="androidx.startup.InitializationProvider"
+59-->[androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+60            android:authorities="com.example.mirrormeV2.androidx-startup"
+60-->[androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+61            android:exported="false" >
+61-->[androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+62            <meta-data
+62-->[androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+63                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+63-->[androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+64                android:value="androidx.startup" />
+64-->[androidx.emoji2:emoji2:1.3.0] /Users/mariam/.gradle/caches/8.11.1/transforms/acf3134c14ef6345c31f1a4faa287edd/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+65            <meta-data
+65-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:14:13-16:52
+66                android:name="io.github.jan.supabase.gotrue.SupabaseInitializer"
+66-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:15:17-81
+67                android:value="androidx.startup" />
+67-->[io.github.jan-tennert.supabase:gotrue-kt-android-debug:1.3.1] /Users/mariam/.gradle/caches/8.11.1/transforms/17377800612a8bfed392013deca04465/transformed/gotrue-kt-debug/AndroidManifest.xml:16:17-49
+68            <meta-data
+68-->[io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:14:13-16:52
+69                android:name="io.github.jan.supabase.auth.SupabaseInitializer"
+69-->[io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:15:17-79
+70                android:value="androidx.startup" />
+70-->[io.github.jan-tennert.supabase:auth-kt-android-debug:3.0.0-beta-1] /Users/mariam/.gradle/caches/8.11.1/transforms/14a3370b329395ca444fe942a64e864c/transformed/auth-kt-debug/AndroidManifest.xml:16:17-49
+71            <meta-data
+71-->[androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:29:13-31:52
+72                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+72-->[androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:30:17-78
+73                android:value="androidx.startup" />
+73-->[androidx.lifecycle:lifecycle-process:2.9.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9c9d77ae49e34abb783aa96849e363be/transformed/lifecycle-process-2.9.0/AndroidManifest.xml:31:17-49
+74            <meta-data
+74-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:29:13-31:52
+75                android:name="com.russhwolf.settings.SettingsInitializer"
+75-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:30:17-74
+76                android:value="androidx.startup" />
+76-->[com.russhwolf:multiplatform-settings-no-arg-android-debug:1.2.0] /Users/mariam/.gradle/caches/8.11.1/transforms/bc63c646566af3e402cb59a3c17cf64a/transformed/multiplatform-settings-no-arg-debug/AndroidManifest.xml:31:17-49
+77            <meta-data
+77-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+78-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+79                android:value="androidx.startup" />
+79-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+80        </provider>
+81
+82        <uses-library
+82-->[androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+83            android:name="androidx.window.extensions"
+83-->[androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+84            android:required="false" />
+84-->[androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+85        <uses-library
+85-->[androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+86            android:name="androidx.window.sidecar"
+86-->[androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+87            android:required="false" />
+87-->[androidx.window:window:1.0.0] /Users/mariam/.gradle/caches/8.11.1/transforms/5f8b23c4adbf552f7e1c0f3cc7fcd3f7/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+88
+89        <activity
+89-->[androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:23:9-25:39
+90            android:name="androidx.activity.ComponentActivity"
+90-->[androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:24:13-63
+91            android:exported="true" />
+91-->[androidx.compose.ui:ui-test-manifest:1.7.8] /Users/mariam/.gradle/caches/8.11.1/transforms/8e252cdcb06bfa449bf1206847408d9d/transformed/ui-test-manifest-1.7.8/AndroidManifest.xml:25:13-36
+92
+93        <receiver
+93-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+94            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+94-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+95            android:directBootAware="false"
+95-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+96            android:enabled="true"
+96-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+97            android:exported="true"
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+98            android:permission="android.permission.DUMP" >
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+99            <intent-filter>
+99-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+100                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+100-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+101            </intent-filter>
+102            <intent-filter>
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+103                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+104            </intent-filter>
+105            <intent-filter>
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+106                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+107            </intent-filter>
+108            <intent-filter>
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+109                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /Users/mariam/.gradle/caches/8.11.1/transforms/9676e864fcbb6c2da75b34c88663efc3/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+110            </intent-filter>
+111        </receiver>
+112    </application>
+113
+114</manifest>

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.mirrorme.app-mergeDebugResources-75:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "/Users/mariam/.gradle/caches/8.11.1/transforms/366e01c46717856988fd7c4eea28f6d7/transformed/appcompat-1.7.0/res/values-port/values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

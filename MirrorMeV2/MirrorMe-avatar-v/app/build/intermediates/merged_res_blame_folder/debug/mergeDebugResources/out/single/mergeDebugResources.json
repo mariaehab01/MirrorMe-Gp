@@ -1,0 +1,234 @@
+[
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_skirts.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/skirts.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_pink_tshirt.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/pink_tshirt.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_phone.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/phone.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_eye_closed.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/eye_closed.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_lock.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/lock.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_f_body4.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/f_body4.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_ic_woman.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/ic_woman.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_m_body3.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/m_body3.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_f_body1.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/f_body1.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_splash_img.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/splash_img.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_f_body5.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/f_body5.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_m_body1.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/m_body1.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_shoes.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/shoes.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_m_body4.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/m_body4.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_page_indicators.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/page_indicators.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_f_body2.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/f_body2.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_email.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/email.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_jackets.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/jackets.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_cart.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/cart.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/anim_slide_in_right.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/anim/slide_in_right.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_mirrorme_bg.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/mirrorme_bg.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/xml_backup_rules.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_casual_shirt.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/casual_shirt.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_m_body2.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/m_body2.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_comfy_set.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/comfy_set.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_f_body3.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/f_body3.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_home_banner.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/home_banner.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_devicon_google.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/devicon_google.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_m_body5.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/m_body5.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_eye_opened.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/eye_opened.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_shopping_bg.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/shopping_bg.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_dresses.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/dresses.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_pants.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/pants.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.mirrorme.app-main-79:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_ic_man.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/ic_man.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_tops.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/tops.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/anim_slide_out_left.xml.flat",
+        "source": "com.example.mirrorme.app-main-79:/anim/slide_out_left.xml"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_grey_tshirt.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/grey_tshirt.png"
+    },
+    {
+        "merged": "com.example.mirrorme.app-debug-77:/drawable_logos_facebook.png.flat",
+        "source": "com.example.mirrorme.app-main-79:/drawable/logos_facebook.png"
+    }
+]
