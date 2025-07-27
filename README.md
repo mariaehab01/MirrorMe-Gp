@@ -13,7 +13,7 @@ This project was developed as part of the **graduation project at FCAI-CU** (Fac
 
 
 - **AI-Powered Recommendations**
-  - Integrated **three custom-developed AI models** trained on a dataset of 5,000+ fashion items to provide highly personalized recommendations:
+  Integrated **three custom-developed AI models** trained on a dataset of 5,000+ fashion items to provide highly personalized recommendations:
     - **Similarity Model** – Finds visually similar fashion items.
     - **Compatibility Model** – suggest items that match well together in an outfit.
     - **Outfit Suggestion Model** – Builds complete outfit suggestions tailored to the user.
