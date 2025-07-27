@@ -9,18 +9,18 @@ This project was developed as part of the **graduation project at FCAI-CU** (Fac
 ## Features
 
 - **Dual Try-On Modes**  
-  Try outfits via real-time **camera-based AR** or through a personalized **3D avatar**.
+  - Try outfits via real-time **camera-based AR** or through a personalized **3D avatar**.
 
 
 - **AI-Powered Recommendations**
-  Integrated three custom-developed AI models using a dataset of 5,000+ fashion items to provide highly personalized recommendations:
+  - Integrated three custom-developed AI models using a dataset of 5,000+ fashion items to provide highly personalized recommendations:
     - **Similarity Model** – Finds visually similar fashion items.
     - **Compatibility Model** – suggest items that match well together in an outfit.
     - **Outfit Suggestion Model** – Builds complete outfit suggestions tailored to the user.
       
   
 - **Admin Dashboard**  
-  A web-based admin panel for managing the inventory and users with real-time Supabase integration.
+  - A web-based admin panel for managing the inventory and users with real-time Supabase integration.
   
 ---
 
