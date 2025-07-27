@@ -11,11 +11,13 @@ This project was developed as part of the **graduation project at FCAI-CU** (Fac
 - **Dual Try-On Modes**  
   Try outfits via real-time **camera-based AR** or through a personalized **3D avatar**.
 
-- **Smart Recommendations**
-  MirrorMe integrates **three custom-developed AI models** trained on a dataset of 5,000+ fashion items to provide highly personalized recommendations:
-  - **Similarity Model** – Finds visually similar fashion items.
-  - **Compatibility Model** – suggest items that match well together in an outfit.
-  - **Outfit Suggestion Model** – Builds complete outfit suggestions tailored to the user.
+
+- **AI-Powered Recommendations**
+  - Integrated **three custom-developed AI models** trained on a dataset of 5,000+ fashion items to provide highly personalized recommendations:
+    - **Similarity Model** – Finds visually similar fashion items.
+    - **Compatibility Model** – suggest items that match well together in an outfit.
+    - **Outfit Suggestion Model** – Builds complete outfit suggestions tailored to the user.
+      
   
 - **Admin Dashboard**  
   A web-based admin panel for managing the inventory and users with real-time Supabase integration.
